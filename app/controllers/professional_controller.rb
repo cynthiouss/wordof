@@ -1,20 +1,17 @@
 class ProfessionalController < ApplicationController
   before_action :find_prof, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @professionals = Professional.all
-  end
-
   def new
     @professional = Professional.new
   end
 
   def create
-    @professional = Professional.new(prof_params)
+    @user = current_user
+    @professional = @user.build_professional(prof_params)
     if @professional.save
-      redirect_to professional_path(@professional)
+      redirect_to user_professional_path(@user.id, @professional.id)
     else
-      render :new
+      redirect_to user_path
     end
   end
 
@@ -24,7 +21,7 @@ class ProfessionalController < ApplicationController
   def update
     @professional.update_attributes(prof_params)
     if @professional.save
-      redirect_to professional_path(@professional)
+      redirect_to user_professional_path(@user.id, @professional.id)
     else
       render :edit
     end
@@ -41,11 +38,12 @@ class ProfessionalController < ApplicationController
   private
 
   def find_prof
+    @user = current_user
     @professional = Professional.find(params[:id])
   end
 
-  def user_params
-    params.require(:professional).permit(:category, :specialty, :languages, :address, :phone, :prof_email)
+  def prof_params
+    params.require(:professional).permit(:user_id, :category, :specialty, :languages, :address, :phone, :prof_email, :recommended_by)
   end
 
 end

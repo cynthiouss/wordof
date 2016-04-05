@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :user
-  resources :professional
+  resources :user do
+    resources :professional
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
