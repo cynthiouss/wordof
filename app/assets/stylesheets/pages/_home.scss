@@ -1,4 +1,151 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+/*Banner*/
+.banner {
+  background-image: url('././building.jpeg');
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.banner-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.banner p {
+  font-size: 23px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+/* HowItWorks button*/
+
+.btn-work {
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #334C62;
+    transition: background 0.1s ease-in-out;
+}
+
+.btn-work:hover {
+    opacity: 1;
+    background: #fff;
+    text-decoration: none;
+    color: #334c62;
+    box-shadow: 1px 1px 5px;
+}
+
+.insert {
+    padding-left: 6px;
+    padding-bottom: 6px;
+    padding-top: 5px;
+    height: 34px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-color: #ccc;
+}
+
+h1 {
+ margin: 0px 0px;
+ color: white;
+}
+
+
+.discover {
+ padding: 0px 0px;
+ margin: 30px 0px;
+}
+
+.discover img {
+ height: 10%;
+ width: 10%;
+}
+
+.wrapper {
+ background-color: white;
+}
+
+.values {
+ display: flex;
+ justify-content: space-between;
+ margin: 0px 30px;
+}
+
+
+.top {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 400px;
+ height: 270px;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ color: white;
+}
+
+.bottom {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #334c62 ;
+ width: 400px;
+ height: 100px;
+ color: white;
+ padding: 0px 10px;
+}
+
+.quickness {
+ background-image: url('././Time.jpg');
+}
+
+.proximity {
+ background-image: url('././People.jpg');
+}
+
+.trust {
+ background-image: url('././man_on_bike.jpeg');
+}
+
+.banner-subscribers {
+ background-image: url('././Trees.jpeg');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ opacity: 0.8;
+ background-size: cover;
+ background-attachment: fixed;
+ height: 500px;
+ width: 100%;
+}
+
+.banner-subscribers h3 {
+ color: white;
+}
+
+.message {
+  position: absolute;
+  z-index: 1;
+  padding:50px 0px;
+}
+
+.message h1 {
+ font-size: 50px;
+ color: white;
+ background-color: #334c62 ;
+ opacity: 0.8;
+}
+
+.separation {
+  margin-bottom: 61px;
+}
