@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'pages/welcome'
+
+  get 'pages/about'
+
+  get 'pages/contact'
+
+  get 'user/create'
+
+  get 'user/update'
+
+  get 'user/destroy'
+
   devise_for :users
   root to: 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
