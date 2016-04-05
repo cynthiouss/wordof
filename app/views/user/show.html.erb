@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Hey <%= @user.name %>!</h1>
+    </div>
+    <div class="col-md-10">
+      <p>Ready to find trusted service providers in <%= @user.city %>? Go to search.</p>
+    </div>
+    <div class="col-md-10">
+      <p>Would you like to be listed as a service provider yourself? Create a <%= link_to "professional profile" new_professional_path(@user) %> in just 5 minutes.</p>
+    </div>
+    <div class="col-md-6">
+      <p><%= link_to "Edit profile", edit_user_path(@user) %> | <%= link_to "Delete profile", user_path(@user), method: :delete %> | <%= link_to "Back", root_path %></p>
+    </div>
+  </div>
+</div>
