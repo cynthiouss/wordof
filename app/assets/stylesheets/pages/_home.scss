@@ -1,5 +1,6 @@
 /*Banner*/
 .banner {
+  background-image: url('././building.jpeg');
   color: white;
   text-align: center;
   height: 100vh;
@@ -7,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 35px;
 }
 
 .banner-content h1 {
@@ -29,7 +31,7 @@
     padding: 10px 25px;
     border-radius: 4px;
     font-weight: bold;
-    background: #334c62;
+    background: #334C62;
     transition: background 0.1s ease-in-out;
 }
 
@@ -132,7 +134,9 @@ h1 {
 }
 
 .message {
- padding:50px 0px;
+  position: absolute;
+  z-index: 1;
+  padding:50px 0px;
 }
 
 .message h1 {
@@ -140,4 +144,8 @@ h1 {
  color: white;
  background-color: #334c62 ;
  opacity: 0.8;
+}
+
+.separation {
+  margin-bottom: 61px;
 }
