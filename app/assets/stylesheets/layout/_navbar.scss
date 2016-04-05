@@ -19,6 +19,14 @@
   width: 100%;
 }
 
+/* Navbar left section (with logo and form) */
+.navbar-wordof-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 /* Navbar logo */
 .navbar-wagon-brand img {
   width: 50px;
@@ -50,26 +58,26 @@
 
 /* Navbar right button */
 .navbar-wagon-button {
-  margin-left: 10px;
-  padding: 0 20px;
-  border-radius: 20em;
-  line-height: 40px;
-  background-color: #D23333;
-  color: white;
-  font-size: 14px;
-  border: 2px solid #D23333;
+  color: #fff;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #334c62;
+  transition: background 0.1s ease-in-out;
 }
 .navbar-wagon-button:hover {
-  color: white;
-  background: #D23333;
-  border-color: #ac2626;
+  opacity: 1;
+  background: #fff;
+  text-decoration: none;
+  color: #334c62;
+  box-shadow: 1px 1px 5px;
 }
 
 /* Navbar search form */
 .navbar-wagon-search {
   flex: 0 1 300px;
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   padding: 0 10px;
   position: relative;
 }
