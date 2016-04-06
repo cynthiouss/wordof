@@ -29,7 +29,7 @@ h1 {
 }
 
 .banner {
- background-image: url('././building.jpeg');
+ background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949824/wordof/building.jpg");
  text-align: center;
  height: 100vh;
  /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -106,19 +106,19 @@ h1 {
 }
 
 .quickness {
- background-image: url('././Time.jpg');
+ background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949323/wordof/Time.jpg");
 }
 
 .proximity {
- background-image: url('././People.jpg');
+ background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949318/wordof/People.jpg");
 }
 
 .trust {
- background-image: url('././man_on_bike.jpeg');
+ background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949321/wordof/man_on_bike.jpg");
 }
 
 .banner-subscribers {
- background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('././Trees.jpeg');
+ background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949325/wordof/Trees.jpg");
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -164,7 +164,7 @@ h1 {
 
 .join {
  margin: 70px 0px;
- background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('./WORDOF_pictures/Trees.jpeg');
+ background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949325/wordof/Trees.jpg");
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
