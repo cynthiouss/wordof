@@ -1,20 +1,26 @@
-<div class="container">
+<div class="container" style="margin-top: 85px">
+
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
       <h1>Edit your user profile</h1>
-    <div class="col-md-5">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
       <div class="form-box">
         <%= simple_form_for(@user, html: { class: 'form-horizontal' }) do |f| %>
           <%= f.input :name, placeholder: @user.name %>
           <%= f.input :city, placeholder: @user.city %>
           <%= f.input :picture, placeholder: @user.picture %>
+          <%= f.input :picture_cache, as: :hidden %>
           <%= f.button :submit %>
         <% end %>
       </div>
     </div>
   </div>
-</div>
 
-<div class="col-md-10">
-  <p>Would you like to be listed as a service provider yourself? Create a <%= link_to "professional profile", new_user_professional_path(current_user) %> in just 5 minutes.</p>
+  <div class="col-md-10">
+    <p>Would you like to be listed as a service provider yourself? Create a <%= link_to "professional profile", new_user_professional_path(current_user) %> in just 5 minutes.</p>
+  </div>
 </div>
