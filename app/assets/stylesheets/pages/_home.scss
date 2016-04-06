@@ -1,27 +1,7 @@
-/*Banner*/
-.banner {
-  background-image: url('././building.jpeg');
-  color: white;
-  text-align: center;
-  height: 100vh;
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 35px;
-}
 
-.banner-content h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 2px 2px black;
-}
-
-.banner p {
-  font-size: 23px;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
+h1 {
+ margin: 0px 0px;
+ color: white;
 }
 
 /* HowItWorks button*/
@@ -43,22 +23,27 @@
     box-shadow: 1px 1px 5px;
 }
 
-.insert {
-    padding-left: 6px;
-    padding-bottom: 6px;
-    padding-top: 5px;
-    height: 34px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    border-color: #ccc;
+
+#scroll {
+  padding-top: 30px;
 }
 
-h1 {
- margin: 0px 0px;
- color: white;
+.banner {
+ background-image: url('././building.jpeg');
+ text-align: center;
+ height: 100vh;
+ /* if you have a 70px navbar => height: calc(100vh - 70px); */
+ background-size: cover !important;
+ background-attachment: fixed;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
+.banner p {
+ color: red;
+ font-size: 17px;
+}
 
 .discover {
  padding: 0px 0px;
@@ -68,6 +53,20 @@ h1 {
 .discover img {
  height: 10%;
  width: 10%;
+}
+
+/* .first_banner {
+ background-image: url('./WORDOF_pictures/building.jpeg');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ height: 100%;
+ height: 100%;
+}
+ */
+.first_banner p {
+ color: black;
 }
 
 .wrapper {
@@ -98,11 +97,12 @@ h1 {
  display: flex;
  align-items: center;
  justify-content: center;
- background-color: #334c62 ;
+ background-color: #DC4F41 ;
  width: 400px;
  height: 100px;
  color: white;
  padding: 0px 10px;
+ text-align: center;
 }
 
 .quickness {
@@ -118,34 +118,121 @@ h1 {
 }
 
 .banner-subscribers {
- background-image: url('././Trees.jpeg');
+ background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('././Trees.jpeg');
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
- opacity: 0.8;
  background-size: cover;
  background-attachment: fixed;
- height: 500px;
+ height: auto;
  width: 100%;
+ padding: 100px;
 }
 
 .banner-subscribers h3 {
  color: white;
 }
 
+.btn-suscribers {
+ width: auto;
+ height: 50px;
+ background-color: transparent;
+ font-size: 20px;
+ border: 3px solid #c9302c ;
+}
+
+.btn-suscribers:hover {
+ background-color: #c9302c ;
+}
 .message {
-  position: absolute;
-  z-index: 1;
-  padding:50px 0px;
+ padding:50px 0px;
 }
 
 .message h1 {
  font-size: 50px;
  color: white;
- background-color: #334c62 ;
+}
+
+.social {
+ padding: 50px 0px;
  opacity: 0.8;
 }
 
-.separation {
-  margin-bottom: 61px;
+.social:hover {
+ opacity: 1;
+}
+
+.join {
+ margin: 70px 0px;
+ background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('./WORDOF_pictures/Trees.jpeg');
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ opacity: 0.8;
+ background-size: cover;
+ background-attachment: fixed;
+}
+
+.join h1 {
+ color: white;
+}
+
+.socialnetworks {
+display: flex;
+justify-content: space-around;
+}
+
+.jointitle {
+ display: flex;
+ justify-content: space-around;
+ margin-bottom: 60px;
+}
+
+.facebook {
+ background-color: #3A5795 ;
+ height: 220px;
+ width: 220px;
+ border-radius: 20px;
+}
+
+.instagram {
+ background-color: #E7E2C1 ;
+ height: 220px;
+ width: 220px;
+ border-radius: 20px;
+}
+
+.twitter {
+ background-color: #5EA9DD ;
+ height: 220px;
+ width: 220px;
+ border-radius: 20px;
+}
+
+.fa {
+ color: #fff;
+}
+
+.rowtestimonials {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.testimonials img {
+ height: 100%;
+ width: 100%;
+ }
+
+.testimonialpic {
+ height: 350px;
+ width: 220px;
+}
+
+.testimonialtext {
+ height: 350px;
+ width: 220px;
+ padding: 10px 15px;
+ display: flex;
+ align-items: center;
 }
