@@ -10,6 +10,9 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'redis'
 
+gem 'cloudinary'
+gem 'carrierwave'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -17,6 +20,10 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+
+gem 'devise-bootstrap-views'
+
+gem 'faker'
 
 group :development, :test do
   gem 'binding_of_caller'

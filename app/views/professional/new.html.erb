@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+      <h1>Create your profile as a service provider</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+      <div class="form-box">
+        <%= simple_form_for(@professional, :url => user_professional_index_path) do |f| %>
+          <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
+          <%= f.input :category, placeholder: "Doctor/Lawyer/Handyman" %>
+          <%= f.input :specialty, placeholder: "Dentist/Divorce/Plumber" %>
+          <%= f.input :languages, placeholder: "English, French, German" %>
+          <%= f.input :address, placeholder: "Avenue Louise 6, 1000" %>
+          <%= f.input :phone, placeholder: "02 217 83 45" %>
+          <%= f.input :prof_email, placeholder: "max@maxco.com" %>
+          <%= f.input :recommended_by, :as => :hidden, :input_html => { :value => 0 } %>
+          <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
