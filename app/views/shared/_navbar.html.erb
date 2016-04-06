@@ -12,6 +12,17 @@
         <i class="fa fa-search"></i>
       </button>
     </form>
+
+    <!--Category selector-->
+    <select class="selectpicker" data-live-search="true">
+      <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+      <option data-tokens="mustard">Burger, Shake and a Smile</option>
+      <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+    </select>
+
+
+
+
   </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -20,12 +31,12 @@
     <% if user_signed_in? %>
 
       <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
+      <!-- <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
         <div class="badge-container badge">
           <i class="fa fa-envelope-o"></i>
           <div class="badge badge-blue">3</div>
         </div>
-      <% end %>
+      <% end %> -->
 
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">

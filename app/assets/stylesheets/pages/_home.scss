@@ -1,53 +1,72 @@
+body {
+  padding-top: 50px;
+}
 
-h1 {
- margin: 0px 0px;
- color: white;
+/*******************************
+            BANNER
+*******************************/
+
+.banner {
+  background-image: url('././building.jpeg');
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  text-shadow: 2px 1px #344C62;
+  color: white;
+  font-size: 50px;
+}
+
+.banner p {
+ color: #344C62;
+ text-shadow: 2px 1px #fff;
+ font-size: 23px;
+ font-weight: bold;
 }
 
 /* HowItWorks button*/
 
 .btn-work {
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 4px;
-    font-weight: bold;
-    background: #334C62;
-    transition: background 0.1s ease-in-out;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #334C62;
+  transition: background 0.1s ease-in-out;
 }
 
 .btn-work:hover {
-    opacity: 1;
-    background: #fff;
-    text-decoration: none;
-    color: #334c62;
-    box-shadow: 1px 1px 5px;
+  opacity: 1;
+  background: #fff;
+  text-decoration: none;
+  color: #334c62;
+  box-shadow: 1px 1px 5px;
 }
+
+/* Search Bar */
+
+
+/*End of Search Bar*/
 
 
 #scroll {
   padding-top: 30px;
 }
 
-.banner {
- background-image: url('././building.jpeg');
- text-align: center;
- height: 100vh;
- /* if you have a 70px navbar => height: calc(100vh - 70px); */
- background-size: cover !important;
- background-attachment: fixed;
- display: flex;
- align-items: center;
- justify-content: center;
-}
+/*******************************
 
-.banner p {
- color: red;
- font-size: 17px;
-}
+*******************************/
 
 .discover {
  padding: 0px 0px;
- margin: 30px 0px;
+ margin: 30px 0px 0px 0px;
 }
 
 .discover img {
@@ -84,13 +103,14 @@ h1 {
  display: flex;
  align-items: center;
  justify-content: center;
- width: 400px;
+ width: 100%;
  height: 270px;
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
  color: white;
+     background-position: center;
 }
 
 .bottom {
@@ -98,11 +118,12 @@ h1 {
  align-items: center;
  justify-content: center;
  background-color: #DC4F41 ;
- width: 400px;
+ width: 100%;
  height: 100px;
  color: white;
  padding: 0px 10px;
  text-align: center;
+ margin-bottom: 40px;
 }
 
 .quickness {
@@ -117,6 +138,10 @@ h1 {
  background-image: url('././man_on_bike.jpeg');
 }
 
+/*******************************
+
+*******************************/
+
 .banner-subscribers {
  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('././Trees.jpeg');
  -webkit-background-size: cover;
@@ -127,6 +152,7 @@ h1 {
  height: auto;
  width: 100%;
  padding: 100px;
+ margin-top: 15px
 }
 
 .banner-subscribers h3 {
@@ -180,6 +206,13 @@ h1 {
 .socialnetworks {
 display: flex;
 justify-content: space-around;
+    text-align: center;
+
+}
+
+.socialnetworks h1 {
+  margin: 0px 0px;
+  color: #fff;
 }
 
 .jointitle {
@@ -202,14 +235,14 @@ justify-content: space-around;
  border-radius: 20px;
 }
 
-.twitter {
- background-color: #5EA9DD ;
+.linkedin {
+ background-color: #1C87BD ;
  height: 220px;
  width: 220px;
  border-radius: 20px;
 }
 
-.fa {
+#fa-font {
  color: #fff;
 }
 
@@ -226,13 +259,20 @@ justify-content: space-around;
 
 .testimonialpic {
  height: 350px;
- width: 220px;
+ width: 16.666%;
+  float: left;
+  background-size: cover;
+  background-position: center;
 }
 
 .testimonialtext {
  height: 350px;
- width: 220px;
+ width: 16.666%;
  padding: 10px 15px;
- display: flex;
- align-items: center;
+ float: left;
+ font-size: 12px;
+}
+
+.card {
+  padding:10px;
 }
