@@ -22,8 +22,6 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'bootstrap-select-rails'
 
-gem 'devise-bootstrap-views'
-
 gem 'faker'
 
 group :development, :test do
