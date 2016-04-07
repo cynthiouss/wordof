@@ -62,15 +62,19 @@
 
     <% else %>
 
-      <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <!-- How it works -->
+      <a href="#scroll" class="navbar-wagon-item navbar-wagon-link navbar-space">How it works</a>
 
-      <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <!-- Button (call-to-action) -->
+      <%= link_to t(".top_call_to_action", default: "About us"), "#", class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
+
+      <!-- Login text link -->
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn navbar-space" %>
+
+      <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
 
     <% end %>
 
-    <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "About us"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -86,3 +90,5 @@
   </div>
 </div>
 
+<!-- class="btn-work"-->
+<!-- class: "navbar-wagon-item navbar-wagon-link" -->

@@ -43,7 +43,6 @@
 .navbar-wagon-item {
   flex: 0 1 auto;
   cursor: pointer;
-  padding: 0 20px;
 }
 
 /* Navbar standard link */
@@ -65,6 +64,11 @@
   background: #334c62;
   transition: background 0.1s ease-in-out;
 }
+
+.navbar-space {
+  margin-right: 30px;
+}
+
 .navbar-wagon-button:hover {
   opacity: 1;
   background: #fff;
