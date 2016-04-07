@@ -45,7 +45,7 @@
         </div>
       </div>
 
-    <% elsif current_page?(:controller => 'devise/sessions', :action => 'new') || current_page?(:controller => 'devise/registrations', :action => 'new') %>
+    <% elsif current_page?(:controller => 'devise/sessions', :action => 'new') || current_page?(:controller => 'devise/registrations', :action => 'new') || current_page?(:controller => 'devise/passwords', :action => 'new') %>
 
     <!-- How it works -->
       <%= link_to t(".sign_in", default: "How it works"), root_path, class: "navbar-wagon-item navbar-wagon-link navbar-space" %> <!-- To add id: 'scroll' does not work... So for now, it only returns to the home page-->
