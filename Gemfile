@@ -20,6 +20,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'bootstrap-select-rails'
 
 gem 'devise-bootstrap-views'
 

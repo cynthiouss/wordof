@@ -8,7 +8,7 @@
                         <li> <a href="https://www.facebook.com/wordofpage/" target="_blank"> <i class=" fa fa-facebook"></i> </a> </li>
                         <li> <a href="https://www.instagram.com/_wordof_/" target="_blank"> <i class="fa fa-instagram"></i> </a> </li>
                         <li> <a href="https://www.linkedin.com/company/6652621?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A6652621%2Cidx%3A2-2-3%2CtarId%3A1459932317123%2Ctas%3Awordo" target="_blank"> <i class="fa fa-linkedin"></i> </a> </li>
-                        <li> <a href="" target="_blank"> <i class="fa fa-envelope"></i> </a> </li>
+                        <li><a type="button"  data-toggle="modal" data-target="#emailmodal" data-whatever="contact@wordof.com"><i class="fa fa-envelope"></i> </a> </li>
                     </ul>
                 </div>
                 <div class='copyright'>
@@ -21,4 +21,31 @@
         <!--/.container-->
     </div>
 
+
+    <div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Tell us!</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name"> <!--<textarea>contact@wordof.com</textarea>-->
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </footer>

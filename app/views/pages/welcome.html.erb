@@ -7,6 +7,7 @@
       <a href="#scroll" class="btn-work">How it works</a>
     </div>
   </div>
+</div>
 
   <div class='separation' id="scroll"></div>
 
@@ -15,58 +16,71 @@
     <%= cl_image_tag("wordof/WORDOF_logo.png") %>
   </div>
 
-  <div class="wrapper">
-     <div class="values">
-      <div class="card">
-        <div class="top quickness">
-          <h1>QUICKNESS</h1>
-        </div>
-        <div class="bottom">
-          <p>Find in one click the provider you were looking for so long</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="top proximity">
-          <h1>PROXIMITY</h1>
-        </div>
-        <div class="bottom">
-          <p >They're not that far. Find your next provider next to your home</p>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="top quickness">
+            <h1>QUICKNESS</h1>
+          </div>
+          <div class="bottom">
+            <p>Find in one click the provider you were looking for so long</p>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="top trust">
-          <h1>TRUST</h1>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="top proximity">
+            <h1>PROXIMITY</h1>
+          </div>
+          <div class="bottom">
+            <p >They're not that far. Find your next provider next to your home</p>
+          </div>
         </div>
-        <div class="bottom">
-            <p>Relax. If the community recommend them, they should be great</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="top trust">
+            <h1>TRUST</h1>
+          </div>
+          <div class="bottom">
+              <p>Relax. If the community recommend them, they should be great</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <br>
-  <div class="banner-subscribers text-center">
-    <div class="message">
-      <h1>YOU DESERVE IT TOO</h1><br><br>
-      <h3>5000 reliable services providers recommended</h3>
-      <h3>7000 trustable users</h3><br><br>
-      <button type="button" class="btn btn-danger">I want to join too !!!</button>
-    </div>
-    <div class="socialnetworks">
-      <div class="facebook social text-center">
-        <h1>Facebook</h1><br>
-        <a href=""><i class="fa fa-facebook-square fa-5x"></i></a>
-      </div>
-      <div class="instagram social text-center">
-        <h1>Instagram</h1><br>
-        <a href=""><i class="fa fa-instagram fa-5x"></i></a>
-      </div>
-      <div class="twitter social text-center">
-        <h1>Twitter</h1><br>
-        <a href=""><i class="fa fa-twitter-square fa-5x"></i></a>
-      </div>
+
     </div>
   </div>
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="banner-subscribers text-center">
+        <div class="message">
+          <h1>YOU DESERVE IT TOO</h1><br><br>
+          <h3>5000 reliable services providers recommended</h3>
+          <h3>7000 trustable users</h3><br><br>
+          <button type="button" class="btn btn-danger">I want to join too !!!</button>
+        </div>
+        <div class="socialnetworks">
+          <div class="facebook social text-center">
+            <h1>Facebook</h1><br>
+            <a href="https://www.facebook.com/wordofpage/" target="_blank"><i class="fa fa-facebook-square fa-5x" id='fa-font'></i></a>
+          </div>
+          <div class="instagram social text-center">
+            <h1>Instagram</h1><br>
+            <a href="https://www.instagram.com/_wordof_/" target="_blank"><i class="fa fa-instagram fa-5x" id='fa-font'></i></a>
+          </div>
+          <div class="linkedin social text-center">
+            <h1>LinkedIn</h1><br>
+            <a href="https://www.linkedin.com/company/6652621?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A6652621%2Cidx%3A2-2-3%2CtarId%3A1459932317123%2Ctas%3Awordo" target="_blank"><i class="fa fa-linkedin-square fa-5x" id='fa-font'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="testimonials text-center">
     <div class="row rowtestimonials">
@@ -85,14 +99,16 @@
       <div class="testimonialpic">
         <%= cl_image_tag("wordof/Mother.png") %>
       </div>
+
       <div class="testimonialtext">
         <p>"I decided to buy a flat in Brussels and... it was a disaster. I did a mistake by contacting an architect and an entrepreneur I don't know. It was a mess !!! A friend of mine told me to go on WORDOF and I contacted a very creative and professional architect who knows lot of good handymans ! My flat is so beautiful now</p>
       </div>
     </div>
-    <div class="row rowtestimonials">
+    <div class="row">
       <div class="testimonialtext">
         <p>"I cannot spend any money on advertising as it is forbidden in Belgium. All the clients I have are from word of mouth. Now with WORDOF, there is finally a platform that allows me to ad without doing anything else but my job ! And I must admit, I just had to hire a new lawyer to help me in my firm"</p>
       </div>
+
       <div class="testimonialpic">
         <%= cl_image_tag("wordof/Lawyer.png") %>
       </div>

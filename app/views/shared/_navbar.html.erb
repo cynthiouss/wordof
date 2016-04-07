@@ -7,11 +7,20 @@
 
     <!-- Search form -->
     <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Search by category">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
     </form>
+
+    <!--Category selector-->
+    <!-- <select class="selectpicker navbar-wagon-search-input" data-live-search="true">
+      <option>Select a Category</option>
+      <option>Lawyer</option>
+      <option>Dentist</option>
+      <option>Plumber</option>
+    </select> -->
+
   </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -20,12 +29,12 @@
     <% if user_signed_in? %>
 
       <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
+      <!-- <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
         <div class="badge-container badge">
           <i class="fa fa-envelope-o"></i>
           <div class="badge badge-blue">3</div>
         </div>
-      <% end %>
+      <% end %> -->
 
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
