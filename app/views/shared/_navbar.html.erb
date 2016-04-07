@@ -5,6 +5,7 @@
       <%= cl_image_tag("wordof/wordof.png") %>
     <% end %>
 
+
     <!-- Search form -->
     <form action="" class="navbar-wagon-search">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search by category">
@@ -12,15 +13,6 @@
         <i class="fa fa-search"></i>
       </button>
     </form>
-
-    <!--Category selector-->
-    <!-- <select class="selectpicker navbar-wagon-search-input" data-live-search="true">
-      <option>Select a Category</option>
-      <option>Lawyer</option>
-      <option>Dentist</option>
-      <option>Plumber</option>
-    </select> -->
-
   </div>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -28,15 +20,8 @@
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-      <!-- Notification -->
-      <!-- <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-        <div class="badge-container badge">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
-        </div>
-      <% end %> -->
-
       <!-- Profile picture and dropdown -->
+
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://res.cloudinary.com/cynthiouss/image/upload/c_scale,w_200/v1459861816/face_10.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -61,6 +46,12 @@
       </div>
 
     <% elsif current_page?(:controller => 'devise/sessions', :action => 'new') || current_page?(:controller => 'devise/registrations', :action => 'new') %>
+
+    <!-- How it works -->
+      <%= link_to t(".sign_in", default: "How it works"), root_path, class: "navbar-wagon-item navbar-wagon-link navbar-space" %> <!-- To add id: 'scroll' does not work... So for now, it only returns to the home page-->
+
+      <!-- Button (call-to-action) -->
+      <%= link_to t(".top_call_to_action", default: "About us"), "#", class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
 
     <% else %>
 
