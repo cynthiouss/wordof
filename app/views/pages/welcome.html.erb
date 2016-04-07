@@ -1,32 +1,37 @@
-<div class='wrapper'>
+<!-- <div class='wrapper'> -->
   <!--Banner-->
   <div class="banner">
-    <div>
-      <h1>DON'T LOOK FOR IT, JUST FIND IT</h1><br>
-      <p>Find a reliable service provider based on community's recommendations</p><br><br>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-offset-2 col-xs-12 bannerup'>
+          <h1>DON'T LOOK FOR IT, JUST FIND IT</h1><br>
+          <p>Find a reliable service provider based on community's recommendations</p><br><br>
+        </div>
+      </div>
     </div>
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="col-sm-offset-2 col-xs-12 bannerdown">
           <div class = 'search-criteria'>
             <%= form_tag('search', method: :get) do %>
-              <select class = 'form-control center-block' name="category">
+              <select name="category">
               <% @professionals.each do |professional| %>
                 <%= options_for_select([professional.category]) %>
               <% end %>
               </select>
-              <select class = 'form-control center-block' name="specialty">
+              <select name="specialty">
               <% @professionals.each do |professional| %>
                 <%= options_for_select([professional.specialty]) %>
               <% end %>
               </select>
-              <select class = 'form-control center-block' name="city">
+              <select name="city">
               <% @professionals.each do |professional| %>
                 <%= options_for_select([professional.user.city]) %>
               <% end %>
               </select>
-              <select class = 'form-control center-block' name="city">
+              <select name="city">
               <% @professionals.each do |professional| %>
                 <%= options_for_select([professional.languages]) %>
               <% end %>
@@ -37,9 +42,8 @@
         </div>
       </div>
     </div>
-
   </div>
-</div>
+<!-- </div> -->
 
   <div class='separation' id="scroll"></div>
 

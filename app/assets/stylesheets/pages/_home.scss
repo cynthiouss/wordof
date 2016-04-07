@@ -13,9 +13,18 @@ body {
  /* if you have a 70px navbar => height: calc(100vh - 70px); */
  background-size: cover !important;
  background-attachment: fixed;
- display: flex;
+ /* display: flex; */
  align-items: center;
  justify-content: center;
+}
+
+.bannerup {
+  margin-left: 0px;
+  margin-top: 140px;
+}
+
+.bannerdown {
+  margin-left: 0px;
 }
 
 .banner h1 {
