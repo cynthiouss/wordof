@@ -23,6 +23,7 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-select-rails'
 
 gem 'faker'
+gem 'pg_search'
 
 group :development, :test do
   gem 'binding_of_caller'

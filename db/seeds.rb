@@ -6,14 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Professional.destroy_all
 User.destroy_all
 
 pictures = [
-  'http://res.cloudinary.com/cynthiouss/image/upload/c_scale,w_200/v1459861816/face_10.jpg'
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861312/face_3.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861450/face_5.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861688/face_9.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861513/face_6.jpg"
 ]
 
-categories = ["Doctor", "Handyman", "Lawyer"]
-languages = ["English", "French", "German", "Dutch"]
 
 (1..10).each do |i|
   user = User.new
@@ -24,6 +26,13 @@ languages = ["English", "French", "German", "Dutch"]
   user.picture = pictures.shuffle.sample
   user.city = Faker::Address.city
   user.save!
+
+  if i%2 == 0
+    Professional.create!(user_id: user.id, category: Faker::Company.profession, specialty: Faker::Team.creature, languages: Faker::Config.locale)
+  end
 end
 
 p "#{User.count} users created"
+
+p "#{Professional.count} users created"
+

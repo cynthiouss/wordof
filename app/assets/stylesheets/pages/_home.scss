@@ -18,7 +18,6 @@ body {
  justify-content: center;
 }
 
-
 .banner h1 {
   text-shadow: 2px 1px #344C62;
   color: white;
@@ -53,6 +52,11 @@ body {
 
 /* Search Bar */
 
+.search-criteria {
+  padding: 10px 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 /*End of Search Bar*/
 
