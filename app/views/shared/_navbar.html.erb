@@ -22,6 +22,12 @@
 
       <!-- Profile picture and dropdown -->
 
+      <!-- How it works -->
+      <%= link_to t(".sign_in", default: "How it works"), root_path, class: "navbar-wagon-item navbar-wagon-link navbar-space" %> <!-- To add id: 'scroll' does not work... So for now, it only returns to the home page-->
+
+      <!-- Button (call-to-action) -->
+      <%= link_to t(".top_call_to_action", default: "About us"), "#", class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
+
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://res.cloudinary.com/cynthiouss/image/upload/c_scale,w_200/v1459861816/face_10.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
