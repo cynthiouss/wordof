@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def welcome
+    @professionals = Professional.all
   end
 
   def about
