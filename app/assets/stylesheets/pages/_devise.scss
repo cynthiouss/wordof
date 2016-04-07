@@ -1,12 +1,27 @@
 .devise {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #9E9E9E;
-  padding-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px;
+  /* margin-top: 60px;
+  margin-bottom: 15px; */
+  /* border: 1px solid #9E9E9E; */
+  /* padding-bottom: 20px;
+  border-radius: 5px; */
+  /* box-shadow: 1px 1px 5px; */
+  background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949824/wordof/building.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position:absolute;
+  top:0; right:0;
+  bottom:0; left:0;
+
   }
 
 .text {
   color: #fff;
+  text-shadow: 1px 1px #334c62;
+  font-weight: bold;
+}
+
+.position {
+  margin-top: 120px;
 }
