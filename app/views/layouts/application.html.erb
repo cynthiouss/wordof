@@ -14,7 +14,7 @@
       <%= render 'shared/flashes' %>
       <%= yield %>
       <%= javascript_include_tag 'application' %>
-      <% if current_page?(:controller => 'devise/sessions', :action => 'new') || current_page?(:controller => 'devise/registrations', :action => 'new') %></h1>
+      <% if current_page?(:controller => 'devise/sessions', :action => 'new') || current_page?(:controller => 'devise/registrations', :action => 'new') || current_page?(:controller => 'devise/passwords', :action => 'new') %></h1>
       <% else %>
         <%= render 'shared/footer' %>
       <% end %>

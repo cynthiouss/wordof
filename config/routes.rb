@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#welcome'
 
   get '/search', to: 'professional#index'
+  get '/about', to: 'pages#about'
 
   devise_for :users
 
