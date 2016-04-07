@@ -6,5 +6,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :picture, PictureUploader
 
+  include PgSearch
+  multisearchable against: [:city]
+
   has_one :professional
 end

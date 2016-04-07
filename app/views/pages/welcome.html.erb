@@ -4,8 +4,40 @@
     <div>
       <h1>DON'T LOOK FOR IT, JUST FIND IT</h1><br>
       <p>Find a reliable service provider based on community's recommendations</p><br><br>
-      <a href="#scroll" class="btn-work">How it works</a>
     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <div class = 'search-criteria'>
+            <%= form_tag('search', method: :get) do %>
+              <select class = 'form-control center-block' name="category">
+              <% @professionals.each do |professional| %>
+                <%= options_for_select([professional.category]) %>
+              <% end %>
+              </select>
+              <select class = 'form-control center-block' name="specialty">
+              <% @professionals.each do |professional| %>
+                <%= options_for_select([professional.specialty]) %>
+              <% end %>
+              </select>
+              <select class = 'form-control center-block' name="city">
+              <% @professionals.each do |professional| %>
+                <%= options_for_select([professional.user.city]) %>
+              <% end %>
+              </select>
+              <select class = 'form-control center-block' name="city">
+              <% @professionals.each do |professional| %>
+                <%= options_for_select([professional.languages]) %>
+              <% end %>
+              </select>
+              <br><button class="btn btn-primary">Search</button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 

@@ -1,6 +1,14 @@
 class ProfessionalController < ApplicationController
   before_action :find_prof, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @professionals = []
+    results = PgSearch.multisearch(params[:category], params[:specialty], params[:city])
+    results.each do |result|
+      @professionals << result.searchable
+    end
+  end
+
   def new
     @professional = Professional.new
   end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root to: 'pages#welcome'
+  root 'pages#welcome'
+
+  get '/search', to: 'professional#index'
 
   devise_for :users
 

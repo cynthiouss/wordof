@@ -22,9 +22,8 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'bootstrap-select-rails'
 
-gem 'devise-bootstrap-views'
-
 gem 'faker'
+gem 'pg_search'
 
 group :development, :test do
   gem 'binding_of_caller'
