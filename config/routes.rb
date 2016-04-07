@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/search', to: 'professional#index'
   get '/about', to: 'pages#about'
+  get 'searchtest', to: 'pages#searchtest'
 
   devise_for :users
 
