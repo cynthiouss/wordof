@@ -32,11 +32,7 @@
 }
 
 h1 {
-  padding: 10px 0px 10px 0px;
-  font-family: inherit;
-  color: #FF5722;
-  width: 100%;
-  text-align: center;
+
 }
 
 .profilebanner p {
@@ -59,6 +55,7 @@ h1 {
   object-fit: cover;
 }
 
+
 @media (max-width: 1000px) {
   .profilecard {
     flex-flow: column;
@@ -75,8 +72,11 @@ h1 {
 }
 
 .username {
-
-
+  padding: 10px 0px 10px 0px;
+  font-family: inherit;
+  color: #FF5722;
+  width: 100%;
+  text-align: center;
 }
 
 .job {
