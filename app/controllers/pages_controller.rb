@@ -11,4 +11,7 @@ class PagesController < ApplicationController
 
   def searchtest
   end
+
+  def list
+  end
 end
