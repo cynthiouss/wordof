@@ -2,6 +2,8 @@ html, body {
   height: 100%;
 }
 
+
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
@@ -17,17 +19,13 @@ html, body {
 .carousel-inner{ height: 100%;}
 .carousel-inner .item{ height: 100%;
   background-size: cover;
-  background-position:center;
+  background-position: center;
+  overflow: hidden;
 }
 
 .carousel-caption h3 {
   vertical-align: middle;
 }
-
-
-
-
-
 
 
 @import "http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
