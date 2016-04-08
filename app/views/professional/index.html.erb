@@ -1,37 +1,41 @@
-<section class="container">
+
+<div class="container">
   <div class="page-header">
       <h1>Pick among our trusted professionals</h1><br>
   </div>
 
   <div class="row active-with-click">
-    <% @professionals.each do |p| %>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <article class="material-card Deep-Orange">
-            <h2>
-              <span><%= p.user.name %></span>
-              <i class="fa fa-bookmark"></i>
-            </h2>
-            <h3><strong><%= p.category %></strong> specialising in <%= p.specialty %></h3>
-            <h4><%= p.user.city %></h4>
-          <div class="mc-content">
-            <div class="img-container">
-              <img class="img-responsive" src=<%= p.user.picture %>>
-            </div>
-            <div class="mc-description">
-              For 30 years now, I can help you in all your paperwork when you launch a company or buy a house.
+    <% @professionals.each do |professional| %>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <article class="material-card Deep-Orange">
+        <h2>
+          <span><%= professional.user.name %></span>
+          <strong>
+            <i class="fa fa-bookmark"></i>
+            <%= professional.category %> - <%= professional.specialty %>
+          </strong>
+        </h2>
+        <div class="mc-content">
+          <div class="img-container">
+            <img class="img-responsive" src=<%= professional.user.picture.url(:bright_face) %>>
           </div>
+          <div class="mc-description">
+            For 30 years now, I can help you in all your paperwork when you launch a company or buy a house.
           </div>
-          <a class="mc-btn-action">
-            <i class="fa fa-bars"></i>
-          </a>
-          <div class="mc-footer">
-            <a class="fa fa-fw fa-mobile" href=""></a>
-            <a class="fa fa-fw fa-envelope" href=""></a>
-            <a class="fa fa-fw fa-map-marker" href=""></a>
-            <a class="fa fa-fw fa-info" href=""></a>
-          </div>
-        </article>
-      </div>
-    <% end %>
+        </div>
+        <a class="mc-btn-action">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div class="mc-footer">
+          <a class="fa fa-fw fa-mobile" href=""></a>
+          <a class="fa fa-fw fa-envelope" href=""></a>
+          <a class="fa fa-fw fa-map-marker" href=""></a>
+          <a class="fa fa-fw fa-info" href=""></a>
+        </div>
+      </article>
+    </div>
+  <% end %>
   </div>
-</section>
+</div>
+
+<script src="javascript.js"></script>
