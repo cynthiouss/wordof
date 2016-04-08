@@ -16,7 +16,7 @@
           <%= f.input :languages, placeholder: "English, French, German", required: true %>
           <%= f.input :address, placeholder: "Avenue Louise 6, 1000", required: true %>
           <%= f.input :phone, placeholder: "02 217 83 45", required: true %>
-          <%= f.input :prof_email, placeholder: "max@maxco.com", required: true %>
+          <%= f.input :prof_email, label: "Professional email", placeholder: "max@maxco.com", required: true %>
           <%= f.input :recommended_by, :as => :hidden, :input_html => { :value => 0 } %>
           <%= f.button :submit, "Create profile" %>
         <% end %>
