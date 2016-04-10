@@ -193,7 +193,9 @@
 }
 
 .banner-subscribers h3 {
- color: white;
+  color: #fff;
+  font-size: 23px;
+  font-weight: bold;
 }
 
 .btn-suscribers {
@@ -274,7 +276,29 @@ text-align: center;
           Testimonials
 *******************************/
 
-.join {
+.boxdef {
+  padding: 0;
+  height: 342.828px;
+}
+
+.boxdef img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.boxdef p {
+  padding: 15px 15px 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#mom {
+  height: 70%;
+  /* clip: rect(0px,0px,something...px,0px); */
+}
+
+
+/* .join {
  margin: 70px 0px;
  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949325/wordof/Trees.jpg");
  -webkit-background-size: cover;
@@ -325,3 +349,4 @@ text-align: center;
 .card {
   padding:10px;
 }
+ */
