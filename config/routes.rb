@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get 'searchtest', to: 'pages#searchtest'
   get 'list', to: 'pages#list'
+  get 'myagents', to: 'pages#myagents'
 
   devise_for :users
 

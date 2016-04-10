@@ -1,7 +1,10 @@
+.margin-top {
+  margin-top: 70px;
+}
+
 .profilepic {
   height: 100%;
   width: 100%;
-
   margin-right: 30px;
 }
 
@@ -31,12 +34,8 @@
   margin-bottom: 0px;
 }
 
-h1 {
-
-}
-
 .profilebanner p {
-  background-color: #FBE9E7;
+  background-color: white;
   padding: 10px 30px 10px 0px;
   text-align: center;
   height:100%;
@@ -45,7 +44,6 @@ h1 {
 
 .profilecard {
   display: flex;
-  margin-bottom: 30px;
 }
 
 .profilecard img {
@@ -67,7 +65,7 @@ h1 {
 }
 
 .descriptionprofile {
-  background: #FBE9E7;
+  background-color: white;
   margin-bottom: 0px;
 }
 
@@ -85,4 +83,18 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: .5;
+}
+
+.profilebanner h2 {
+ color: white;
+ font-size: 19px;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+}
+
+.profiledesc h2 {
+ color: white;
+ font-size: 19px;
+ text-transform: uppercase;
+ letter-spacing: 3px;
 }

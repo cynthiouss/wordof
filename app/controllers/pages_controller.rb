@@ -14,4 +14,7 @@ class PagesController < ApplicationController
 
   def list
   end
+
+  def myagents
+  end
 end
