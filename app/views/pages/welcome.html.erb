@@ -1,51 +1,51 @@
 <!-- <div class='wrapper'> -->
-  <!--Banner-->
-  <div class="banner firstbanner">
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-offset-2 col-xs-12 bannerup'>
-          <h1>DON'T LOOK FOR IT, JUST FIND IT</h1><br>
-          <p>Find a reliable service provider based on community's recommendations</p><br><br>
-        </div>
+<!--Banner-->
+<div class="banner firstbanner">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-offset-2 col-xs-12 bannerup'>
+        <h1>DON'T LOOK FOR IT, JUST FIND IT</h1><br>
+        <p>Find a reliable service provider based on community's recommendations</p><br><br>
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-offset-2 col-xs-12 bannerdown form-section">
-          <div class = 'search-criteria'>
-            <%= form_tag('search', method: :get, style: 'display: inline-flex') do %>
-              <select class='form-control' name="category">
-              <% @professionals.map(&:category).uniq.each do |category| %>
-                <%= options_for_select([category]) %>
-              <% end %>
-              </select>
-              <select class='form-control' name="specialty">
-              <% @professionals.each do |professional| %>
-                <%= options_for_select([professional.specialty]) %>
-              <% end %>
-              </select>
-              <select class='form-control' name="city">
-              <% @professionals.each do |professional| %>
-                <%= options_for_select([professional.user.city]) %>
-              <% end %>
-              </select>
-              <select class='form-control' name="city">
-              <% @professionals.map(&:languages).uniq.each do |languages| %>
-                <%= options_for_select([languages]) %>
-              <% end %>
-              </select>
-              <br><button class="btn btn-primary">Search</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-2 col-xs-12 bannerdown form-section">
+        <div class = 'search-criteria'>
+          <%= form_tag('search', method: :get, style: 'display: inline-flex') do %>
+          <select class='form-control' name="category">
+            <% @professionals.map(&:category).uniq.each do |category| %>
+            <%= options_for_select([category]) %>
             <% end %>
-          </div>
+          </select>
+          <select class='form-control' name="specialty">
+            <% @professionals.each do |professional| %>
+            <%= options_for_select([professional.specialty]) %>
+            <% end %>
+          </select>
+          <select class='form-control' name="city">
+            <% @professionals.each do |professional| %>
+            <%= options_for_select([professional.user.city]) %>
+            <% end %>
+          </select>
+          <select class='form-control' name="city">
+            <% @professionals.map(&:languages).uniq.each do |languages| %>
+            <%= options_for_select([languages]) %>
+            <% end %>
+          </select>
+          <br><button class="btn btn-primary">Search</button>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
+</div>
 <!-- </div> -->
 
-  <div class='separation' id="scroll"></div>
 
+<div class="white">
   <div class="discover text-center">
     <h3>Designed for you</h3>
     <%= cl_image_tag("wordof/WORDOF_logo.png") %>
@@ -81,26 +81,27 @@
             <h1>TRUST</h1>
           </div>
           <div class="bottom">
-              <p>Relax. If the community recommend them, they should be great</p>
+            <p>Relax. If the community recommend them, they should be great</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="banner banner-subscribers text-center">
-    <div class='container'>
-      <div class='row'>
-        <div class='col-xs-12'>
-          <div class="message">
-            <h1>YOU DESERVE IT TOO</h1><br><br>
-            <h3>5000 reliable services providers recommended 7000 trustable users</h3>
-            <br><br>
-            <button type="button" class="btn btn-danger">I want to join too !!!</button>
-          </div>
+<div class="banner banner-subscribers text-center">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <div class="message">
+          <h1>YOU DESERVE IT TOO</h1><br><br>
+          <h3>5000 reliable services providers recommended 7000 trustable users</h3>
+          <br><br>
+          <button type="button" class="btn btn-danger">I want to join too !!!</button>
         </div>
       </div>
     </div>
+  </div>
     <!-- <div class='container'>
       <div class='row social'>
         <div class="col-xs-12 col-sm-4">
@@ -125,47 +126,47 @@
         <img><%= cl_image_tag("wordof/Leonardo.png") %></img>
       </div>
       <div class='col-xs-6 col-sm-2 boxdef'>
-          <p>"I found a doctor who speaks my language in 2 minutes! Moving in Brussels was so easy"</p>
+        <p>"I found a doctor who speaks my language in 2 minutes! Moving in Brussels was so easy"</p>
       </div>
       <div class='col-xs-6 col-sm-2 boxdef'>
         <img><%= cl_image_tag("wordof/Boy.png") %></img>
       </div>
       <div class='col-xs-6 col-sm-2 boxdef'>
-         <p>"I asked my mother for another dentist. She found me a cool one specialised in children"</p>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef' id='mom'>
-        <div>
-          <img><%= cl_image_tag("wordof/Mother.png") %></img>
-        </div>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-        <p>"I asked my mother for another dentist. She found me a cool one specialised in children."</p>
+       <p>"I asked my mother for another dentist. She found me a cool one specialised in children"</p>
+     </div>
+     <div class='col-xs-6 col-sm-2 boxdef' id='mom'>
+      <div>
+        <img><%= cl_image_tag("wordof/Mother.png") %></img>
       </div>
     </div>
-  </div>
-  <!-- row2 -->
-  <div class='container-fluid'>
-    <div class='row'>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-        <p>"As a lawyer, I cannot advertise but I can be recommended...  My job speaks for me and customers are happy. Now I have new ones"</p>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-          <img><%= cl_image_tag("wordof/Lawyer.png") %></img>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-        <p>"I switched carreer and decided to be 100% freelancer when I'll have enough recommendations and customers on WORDOF"</p>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-          <img><%= cl_image_tag("wordof/Filzi.jpg") %></img>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-        <p>I don't earn a lot... have time to make ads... neither a good image. Being recommended solve all these. New customers do trust me before first meeting"</p>
-      </div>
-      <div class='col-xs-6 col-sm-2 boxdef'>
-        <img><%= cl_image_tag("wordof/electrician.jpg") %></img>
-      </div>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <p>"I asked my mother for another dentist. She found me a cool one specialised in children."</p>
     </div>
   </div>
+</div>
+<!-- row2 -->
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <p>"As a lawyer, I cannot advertise but I can be recommended...  My job speaks for me and customers are happy. Now I have new ones"</p>
+    </div>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <img><%= cl_image_tag("wordof/Lawyer.png") %></img>
+    </div>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <p>"I switched carreer and decided to be 100% freelancer when I'll have enough recommendations and customers on WORDOF"</p>
+    </div>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <img><%= cl_image_tag("wordof/Filzi.jpg") %></img>
+    </div>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <p>I don't earn a lot... have time to make ads... neither a good image. Being recommended solve all these. New customers do trust me before first meeting"</p>
+    </div>
+    <div class='col-xs-6 col-sm-2 boxdef'>
+      <img><%= cl_image_tag("wordof/electrician.jpg") %></img>
+    </div>
+  </div>
+</div>
 
 
 
