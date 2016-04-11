@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def welcome
     @professionals = Professional.all
   end
@@ -17,4 +18,6 @@ class PagesController < ApplicationController
 
   def myagents
   end
+
+
 end
