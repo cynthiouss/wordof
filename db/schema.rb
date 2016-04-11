@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411090527) do
+ActiveRecord::Schema.define(version: 20160411155541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"
@@ -28,8 +34,6 @@ ActiveRecord::Schema.define(version: 20160411090527) do
 
   create_table "professionals", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "category"
-    t.string   "specialty"
     t.string   "languages"
     t.string   "address"
     t.integer  "recommended_by"
@@ -38,9 +42,30 @@ ActiveRecord::Schema.define(version: 20160411090527) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "description"
+    t.integer  "specialty_id"
   end
 
+  add_index "professionals", ["specialty_id"], name: "index_professionals_on_specialty_id", using: :btree
   add_index "professionals", ["user_id"], name: "index_professionals_on_user_id", using: :btree
+
+  create_table "saveds", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "professional_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "saveds", ["professional_id"], name: "index_saveds_on_professional_id", using: :btree
+  add_index "saveds", ["user_id"], name: "index_saveds_on_user_id", using: :btree
+
+  create_table "specialties", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "specialties", ["category_id"], name: "index_specialties_on_category_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -63,5 +88,9 @@ ActiveRecord::Schema.define(version: 20160411090527) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "professionals", "specialties"
   add_foreign_key "professionals", "users"
+  add_foreign_key "saveds", "professionals"
+  add_foreign_key "saveds", "users"
+  add_foreign_key "specialties", "categories"
 end

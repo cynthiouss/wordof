@@ -3,7 +3,7 @@ class ProfessionalController < ApplicationController
 
   def index
     @professionals = []
-    results = PgSearch.multisearch(params[:category], params[:specialty], params[:city])
+    results = PgSearch.multisearch(params[:specialty_id], params[:city])
     results.each do |result|
       @professionals << result.searchable
     end
@@ -51,7 +51,7 @@ class ProfessionalController < ApplicationController
   end
 
   def prof_params
-    params.require(:professional).permit(:user_id, :category, :specialty, :languages, :address, :phone, :prof_email, :recommended_by)
+    params.require(:professional).permit(:user_id, :specialty_id, :languages, :address, :phone, :prof_email, :recommended_by)
   end
 
 end
