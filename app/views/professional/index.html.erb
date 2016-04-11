@@ -20,15 +20,15 @@
             <img class="img-responsive" src=<%= professional.user.picture.url(:bright_face) %>>
           </div>
           <div class="mc-description">
-            For 30 years now, I can help you in all your paperwork when you launch a company or buy a house.
+            <%= professional.description %>
           </div>
         </div>
         <a class="mc-btn-action">
           <i class="fa fa-bars"></i>
         </a>
         <div class="mc-footer">
-          <a class="fa fa-fw fa-mobile" href=""></a>
-          <a class="fa fa-fw fa-envelope" href=""></a>
+          <a class="fa fa-fw fa-mobile" href="tel:<%= professional.phone %> "></a>
+          <a class="fa fa-fw fa-envelope" href="mailto:<%= professional.prof_email %>"></a>
           <a class="fa fa-fw fa-map-marker" href=""></a>
           <a class="fa fa-fw fa-info" href=""></a>
         </div>

@@ -1,12 +1,10 @@
-
-
 <!--   <div class="container"> -->
 <div class="container margin-top">
 
   <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="profilebanner text-center">
-        <h1><span class="username"><%= @professional.user.name %></h3></span> <br><span class= "job"><%= @professional.category%></span></h1>
+        <h1><span class="username"><%= @professional.user.name %></h3></span> <br><span class= "job"><%= @professional.category %></span></h1>
       </div>
     </div>
   </div>
@@ -17,7 +15,7 @@
 
     <div class="descriptionprofile profiledesc">
       <h2> <i class="fa fa-info"></i> Description</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores accusantium ex, culpa reprehenderit porro quod tenetur, autem sapiente ullam nisi. Error nam voluptas iste maiores repellat itaque maxime minima temporibus.</p>
+      <p><%= professional.description %></p>
     </div>
   </div>
 
