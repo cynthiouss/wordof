@@ -1,65 +1,72 @@
 <!--   <div class="container"> -->
-<div class="container margin-top">
-
-  <div class="row">
-      <div class="profilebanner text-center">
-        <h1><span class="username"><%= @professional.user.name %></h3></span> <br><span class= "job"><%= @professional.specialty.category.name %></span></h1>
+<div class="myprofile margin-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="profilebanner text-center">
+          <h3><span class="username"><%= @professional.user.name %></span></h3>
+          <br>
+          <h3><span class="job"><%= @professional.specialty.category.name %></span></h3>
+        </div>
       </div>
     </div>
+
+    <div class="profilecard">
+      <%= cl_image_tag("face_10.jpg") %>
+
+      <div class="descriptionprofile profiledesc">
+        <h2> <i class="fa fa-info"></i> Description</h2>
+        <p><%= @professional.description %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="profilebanner">
+          <h2> <i class="fa fa-plus"></i> Specialisations</h2>
+          <p><%= @professional.specialty.name %></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="profilebanner">
+          <h2> <i class="fa fa-language"></i> Spoken Languages</h2>
+          <p><%= @professional.languages%></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="profilebanner">
+          <h2> <i class="fa fa-map-marker"></i> Address</h2>
+          <p><%= @professional.address%></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="profilebanner">
+          <h2> <i class="fa fa-mobile"></i> Phone</h2>
+          <p><%= @professional.phone%></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="profilebanner">
+          <h2> <i class="fa fa-envelope"></i> Mail</h2>
+          <p><%= @professional.prof_email%></p>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="profilebanner">
+          <h2> <i class="fa fa-globe"></i> Map</h2>
+        </div>
+        <div class='myagentsmap'>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.738315385742!2d4.358259915455894!3d50.836010879530384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4888ce3b8b5%3A0xc67fef6c3109b5f1!2sRue+de+Stassart+60%2C+1050+Ixelles%2C+B%C3%A9lgica!5e0!3m2!1ses!2sbe!4v1460448612745" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+        <p><%= link_to "Back to search", root_path %></p>
+    </div>
+
   </div>
-
-  <div class="profilecard">
-    <%= cl_image_tag("face_10.jpg") %>
-
-    <div class="descriptionprofile profiledesc">
-      <h2> <i class="fa fa-info"></i> Description</h2>
-      <p><%= @professional.description %></p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6 col-sm-6 col-xs-12">
-      <div class="profilebanner">
-        <h2> <i class="fa fa-plus"></i> Specialisations</h2>
-        <p><%= @professional.specialty.name %></p>
-      </div>
-    </div>
-    <div class="col-md-6 col-sm-6 col-xs-12">
-      <div class="profilebanner">
-        <h2> <i class="fa fa-language"></i> Spoken Languages</h2>
-        <p><%= @professional.languages%></p>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="profilebanner">
-        <h2> <i class="fa fa-map-marker"></i> Address</h2>
-        <p><%= @professional.address%></p>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="profilebanner">
-        <h2> <i class="fa fa-mobile"></i> Phone</h2>
-        <p><%= @professional.phone%></p>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-12">
-      <div class="profilebanner">
-        <h2> <i class="fa fa-envelope"></i> Mail</h2>
-        <p><%= @professional.prof_email%></p>
-      </div>
-    </div>
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="profilebanner">
-        <h2> <i class="fa fa-globe"></i> Map</h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <p><%= link_to "Back to search", root_path %></p>
-  </div>
-
 </div>
 
 <script src="javascript.js"></script>
