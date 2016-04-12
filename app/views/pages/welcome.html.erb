@@ -21,8 +21,8 @@
               <% end %>
             </select>
             <select class='form-control' name="specialty">
-              <% @specialties.each do |specialty| %>
-                <%= options_for_select([[specialty.name, {:class => specialty.category.name }]]) %>
+              <% @specialties.map(&:name).uniq.each do |specialty| %>
+                <%= options_for_select([specialty]) %>
               <% end %>
             </select>
             <select class='form-control' name="city">
@@ -30,7 +30,7 @@
                 <%= options_for_select([city]) %>
               <% end %>
             </select>
-            <select class='form-control' name="city">
+            <select class='form-control' name="languages">
               <% @professionals.map(&:languages).uniq.each do |languages| %>
                 <%= options_for_select([languages]) %>
               <% end %>
