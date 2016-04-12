@@ -16,10 +16,13 @@ class PagesController < ApplicationController
   def searchtest
   end
 
-  def list
+  def profile
   end
 
   def myagents
+  end
+
+  def about
   end
 
 

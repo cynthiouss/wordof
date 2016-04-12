@@ -19,6 +19,15 @@ body {
  justify-content: center;
 }
 
+/* <<<<<<< HEAD
+=======
+.white {
+  background-color: white;
+  padding-top: 30px;
+}
+
+
+>>>>>>> d532dab236570d296e3b58bdab1e58e5c199a9d2 */
 .bannerup {
   margin-left: 0px;
   margin-top: 140px;
@@ -63,9 +72,13 @@ body {
   padding-top: 30px;
 }
 
+.discover h3 {
+ padding: 0px;
+ margin: 0px;
+}
+
 .discover {
- padding: 0px 0px;
- margin: 30px 0px 0px 0px;
+  margin: 0px;
 }
 
 .discover img {
@@ -141,7 +154,6 @@ body {
  height: auto;
  width: 100%;
  padding: 100px;
- margin-top: 15px
 }
 
 .banner-subscribers h3 {
