@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'saved/index'
-
-  get 'saved/show'
-
-  get 'saved/index'
-
-  get 'saved/show'
-
-  get 'specialties/index'
-
-  get 'categories/index'
-
   root 'pages#welcome'
 
   get '/search', to: 'professional#index'
@@ -24,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :user do
     resources :professional
+    resources :specialty
+    resources :category
   end
 
 

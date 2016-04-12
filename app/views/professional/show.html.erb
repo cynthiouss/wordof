@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="profilebanner text-center">
-        <h1><span class="username"><%= @professional.user.name %></h3></span> <br><span class= "job"><%= @professional.category %></span></h1>
+        <h1><span class="username"><%= @professional.user.name %></h3></span> <br><span class= "job"><%= @professional.specialty.category.name %></span></h1>
       </div>
     </div>
   </div>
@@ -15,7 +15,7 @@
 
     <div class="descriptionprofile profiledesc">
       <h2> <i class="fa fa-info"></i> Description</h2>
-      <p><%= professional.description %></p>
+      <p><%= @professional.description %></p>
     </div>
   </div>
 
@@ -23,7 +23,7 @@
     <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="profilebanner">
         <h2> <i class="fa fa-plus"></i> Specialisations</h2>
-        <p><%= @professional.specialty%></p>
+        <p><%= @professional.specialty.name %></p>
       </div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">

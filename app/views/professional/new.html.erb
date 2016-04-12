@@ -8,19 +8,7 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <div class="form-box">
-        <%= simple_form_for(@professional, :url => user_professional_index_path) do |f| %>
-          <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
-          <%= f.input :category, collection: [ "Doctor", "Lawyer", "Architect", "Handyman"], prompt: "Select your profession", required: true %>
-          <%= f.input :specialty, placeholder: "Dentist/Divorce/Plumber", required: true %>
-          <%= f.input :languages, collection: [ "English", "French", "Dutch", "German", "Spanish"], prompt: "Select your spoken language(s)", required: true %>
-          <%= f.input :address, placeholder: "Avenue Louise 6, 1000", required: true %>
-          <%= f.input :phone, placeholder: "02 217 83 45", required: true %>
-          <%= f.input :prof_email, label: "Professional email", placeholder: "max@maxco.com", required: true %>
-          <%= f.input :recommended_by, :as => :hidden, :input_html => { :value => 0 } %>
-          <%= f.button :submit, "Create profile" %>
-        <% end %>
-      </div>
+      <%= render "form", professional: @professional %>
     </div>
   </div>
 </div>
