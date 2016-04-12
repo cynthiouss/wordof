@@ -1,8 +1,9 @@
 class Professional < ActiveRecord::Base
   include PgSearch
-  multisearchable against: [:category, :specialty, :languages]
+  multisearchable against: [:specialty_id, :languages]
 
   belongs_to :user
+  belongs_to :specialty
 
   validates :user_id, presence: true
 end

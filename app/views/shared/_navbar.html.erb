@@ -8,7 +8,7 @@
 
     <!-- Search form -->
     <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search by category">
+      <input type="text" class="navbar-wagon-search-input" placeholder="Search a professional">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
@@ -27,6 +27,9 @@
 
       <!-- Button (call-to-action) -->
       <%= link_to t(".top_call_to_action", default: "About us"), "#", class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
+
+      <!-- My recommendations -->
+      <%= link_to t(".top_call_to_action", default: "My recommendations"), 'http://localhost:3000/myagents', class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
 
       <div class="navbar-wagon-item">
         <div class="dropdown">

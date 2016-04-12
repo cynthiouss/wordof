@@ -10,14 +10,33 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-offset-2 col-xs-12 bannerdown form-section">
-        <div class = 'search-criteria'>
-          <%= form_tag('search', method: :get, style: 'display: inline-flex') do %>
-          <select class='form-control' name="category">
-            <% @professionals.map(&:category).uniq.each do |category| %>
-            <%= options_for_select([category]) %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-offset-2 col-xs-12 bannerdown form-section">
+          <div class = 'search-criteria'>
+            <%= form_tag('search', method: :get, style: 'display: inline-flex') do %>
+              <select class='form-control' name="category">
+              <% @categories.each do |category| %>
+                <%= options_for_select([category.name]) %>
+              <% end %>
+              </select>
+              <select class='form-control' name="specialty">
+              <% @specialties.each do |specialty| %>
+                <%= options_for_select([[specialty.name, {:class => specialty.category.name }]]) %>
+              <% end %>
+              </select>
+              <select class='form-control' name="city">
+              <% @users.map(&:city).uniq.each do |city| %>
+                <%= options_for_select([city]) %>
+              <% end %>
+              </select>
+              <select class='form-control' name="city">
+              <% @professionals.map(&:languages).uniq.each do |languages| %>
+                <%= options_for_select([languages]) %>
+              <% end %>
+              </select>
+              <br><button class="btn btn-primary">Search</button>
+
             <% end %>
           </select>
           <select class='form-control' name="specialty">

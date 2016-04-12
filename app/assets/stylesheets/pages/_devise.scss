@@ -5,24 +5,39 @@
   /* padding-bottom: 20px;
   border-radius: 5px; */
   /* box-shadow: 1px 1px 5px; */
-  background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.79) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949824/wordof/building.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position:absolute;
   top:0; right:0;
   bottom:0; left:0;
-
+  background-color: #344C62;
+  height: 118%;
+  position: relative;
   }
 
 .text {
-  color: #fff;
-  text-shadow: 1px 1px #334c62;
+  color: #344C62;
   font-weight: bold;
 }
 
 .position {
-  margin-top: 50px;
+  color: #344C62;
+  border: solid 1px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  padding: 25px 50px;
+  background-color: white;
+  border-radius: 3%;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.signtitle {
+  background-color: #344C62;
+}
+
+.signtitle h2 {
   color: #fff;
+  font-weight: 900;
+}
+
+.forgotpw {
+ width: auto;
 }
