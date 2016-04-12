@@ -2,7 +2,6 @@
 <div class="container margin-top">
 
   <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="profilebanner text-center">
         <h1><span class="username"><%= @professional.user.name %></h3></span> <br><span class= "job"><%= @professional.specialty.category.name %></span></h1>
       </div>
@@ -10,8 +9,7 @@
   </div>
 
   <div class="profilecard">
-      <%= cl_image_tag @professional.user.picture.url(:bright_face) %>
-
+    <%= cl_image_tag("face_10.jpg") %>
 
     <div class="descriptionprofile profiledesc">
       <h2> <i class="fa fa-info"></i> Description</h2>

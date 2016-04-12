@@ -3,9 +3,10 @@ class ProfessionalController < ApplicationController
 
   def index
     @professionals = []
-    results = PgSearch.multisearch(params[:specialty_id], params[:city])
+    specialty = Specialty.find_by_name(params[:specialty])
+    results = PgSearch.multisearch(specialty.id, params[:city], params[:languages])
     results.each do |result|
-      @professionals << result.searchable
+      @professionals << result.searchable if result.searchable.class == Professional
     end
   end
 
@@ -16,9 +17,6 @@ class ProfessionalController < ApplicationController
 
   def create
     @user = current_user
-    byebug
-    p "####################################################"
-    p prof_params
     specialty = Specialty.create(prof_params[:specialty_attributes])
     professional = @user.build_professional(prof_params)
     professional.specialty = specialty
