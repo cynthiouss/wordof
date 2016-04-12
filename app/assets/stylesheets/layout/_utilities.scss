@@ -23,3 +23,23 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+.btn-default {
+  color: #fff;
+  font-weight: bold;
+  background-color: #344C62;
+  margin-top: 10px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  margin-left: 37.5%;
+  transition: background 0.1s ease-in-out;
+  padding: 3px 15px;
+}
+
+.btn-deault :hover {
+  opacity: 1;
+  background: #fff;
+  text-decoration: none;
+  color: #334c62;
+  box-shadow: 1px 1px 5px;
+}
