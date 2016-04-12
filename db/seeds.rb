@@ -67,7 +67,7 @@ pictures = [
   user.save!
 
   if i%2 == 0
-    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com')
+    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: "I'm the best in my field. Choose me and I'll get everything fixed!")
   end
 end
 
