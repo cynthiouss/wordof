@@ -1,36 +1,53 @@
 <div class="container" style="margin-top: 85px">
+
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <div class="profile_pic">
-        <%= cl_image_tag @user.picture.url(:bright_face) %>
+    <div class="col-xs-12 col-sm-offset-5 col-sm-12">
+      <h1>Hey there!</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="top search">
+            <p>Ready to find trusted service providers?</p>
+          </div>
+          <div class="bottom">
+            <h3><%= link_to "Go to search", root_path %></h3>
+          </div>
+        </div>
       </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="top user">
+            <p>Tell us a bit more about yourself</p>
+          </div>
+          <div class="bottom">
+            <h3><%= link_to "Edit your user profile", edit_user_path(@user) %></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="top professional">
+            <p>Would you like to be listed as a service provider?</p>
+          </div>
+          <div class="bottom">
+            <h3><%= link_to "Create professional profile", new_user_professional_path(@current_user) %></h3>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <h2>Hey there!</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <p>Ready to find trusted service providers in <%= @user.city %>? Go to search.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <p>Tell us a bit more about yourself. Take a second to <%= link_to "edit your user profile", edit_user_path(@user) %>.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <p>Would you like to be listed as a service provider? Create a <%= link_to "professional profile", new_user_professional_path(@current_user) %> in just 5 minutes.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-      <p><%= link_to "Delete", user_path(@user), method: :delete %> | <%= link_to "Back", root_path %></p>
+    <div class="col-xs-12 col-sm-offset-5 col-sm-8">
+      <p><%= link_to "Delete profile", user_path(@user), method: :delete %> | <%= link_to "Go to homepage", root_path %></p>
     </div>
   </div>
 </div>

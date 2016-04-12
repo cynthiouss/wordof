@@ -30,9 +30,6 @@
       <!-- Button (call-to-action) -->
       <%= link_to t(".top_call_to_action", default: "About us"), "#", class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
 
-      <!-- My recommendations -->
-      <%= link_to t(".top_call_to_action", default: "My recommendations"), 'http://localhost:3000/myagents', class: "navbar-wagon-item navbar-wagon-link navbar-space" %>
-
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://res.cloudinary.com/cynthiouss/image/upload/c_scale,w_200/v1459861816/face_10.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -45,6 +42,11 @@
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-home"></i>  <%= t ".profile", default: "Saved" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-home"></i> <%= t ".profile", default: "My recommendations" %>
               <% end %>
             </li>
             <li>
