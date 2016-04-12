@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/search', to: 'professional#index'
   get '/about', to: 'pages#about'
   get 'searchtest', to: 'pages#searchtest'
-  get 'list', to: 'pages#list'
+  get 'profile', to: 'pages#profile'
   get 'myagents', to: 'pages#myagents'
 
   devise_for :users

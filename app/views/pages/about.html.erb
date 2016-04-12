@@ -1,2 +1,70 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= cl_image_tag("wordof/typewriter_machine.jpg") %>
+      <div class="carousel-caption">
+        <h1>FOR PRIVATES</h1>
+        <h4>You just moved in a new city, your doctor did retired, you're not satisfied with you lawyer, you have an urgency at home... WORDOF team is totally dedicated to help you finding your next trustable provider</h4>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/woman_photographer.jpg") %>
+      <div class="carousel-caption">
+        <h1>FOR PROFESSIONALS</h1>
+        <h4>Want to switch career, want to grow up your company, don't wanna spend your time and money on advertising... WORDOF help you in building your customers portfolio by just doing your job</h4>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/guitarist.jpg") %>
+      <div class="carousel-caption">
+        <h1>TEAM</h1>
+        <h4>Because we believe you deserve the bests, and that your work speaks better than any ad. We've build the perfect platform for you guys</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="card">
+        <h1 class="nathaniel cardau">Nathaniel</h1>
+        <p class="bottom">Front-end</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="card">
+        <h1 class="cynthia cardau">Cynthia</h1>
+        <p class="bottom">Back-end</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="card">
+        <h1 class="adrien cardau">Adrien</h1>
+        <p class="bottom">Full-stack</p>
+      </div>
+    </div>
+
+
+  </div>
