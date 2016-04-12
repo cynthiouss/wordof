@@ -6,4 +6,6 @@ class Professional < ActiveRecord::Base
   belongs_to :specialty
 
   validates :user_id, presence: true
+
+  accepts_nested_attributes_for :specialty
 end
