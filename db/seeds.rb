@@ -19,21 +19,21 @@ end
 
 p "#{Category.count} categories created"
 
-["Pediatrics", "Dermatology", "Family Medicine", "Otolaryngology", "Dentistry", "Ophthalmology"].each do |d|
+["Allergy & Immunology", "Dermatology", "Family Medicine", "Internal Medicine", "Medical Genetics", "Neurology", "Obstetrics and Gynecology", "Orthopaedic Surgery", "Otolaryngology", "Pathology-Anatomic and Clinical", "Pediatrics", "Physical Medicine and Rehabilitation", "Plastic Surgery", "Psychiatry", "Oncology", "General Surgery", "Urology", "Pediatrics"].each do |d|
   specialty = Specialty.new
   specialty.name = d
   specialty.category = Category.find_by_name("Doctor")
   specialty.save!
 end
 
-["Labour and Employment", "Divorce", "Child Custody", "Medical Malpractice", "Civil Litigation"].each do |l|
+["Alternative dispute resolution", "Bankruptcy", "Civil Litigation", "Child Custody", "Consumer", "Contract", "Copyright", "Divorce", "Immigration", "Labour and Employment", "Medical Malpractice", "Privacy", "Real Estate", "Tax"].each do |l|
   specialty = Specialty.new
   specialty.name = l
   specialty.category = Category.find_by_name("Lawyer")
   specialty.save!
 end
 
-["Math", "English", "Physics", "French"].each do |t|
+["English", "French", "Latin", "Math", "Physics", "Chemistry", "Biology", "Geography", "Economics", "Social Sciences"].each do |t|
   specialty = Specialty.new
   specialty.name = t
   specialty.category = Category.find_by_name("Teacher")
@@ -56,13 +56,13 @@ pictures = [
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861513/face_6.jpg"
 ]
 
-(1..40).each do |i|
+(1..80).each do |i|
   user = User.new
   user.email = i.to_s + '@example.com'
   user.password = 'valid_password'
   user.password_confirmation = 'valid_password'
   user.name = Faker::Name.name
-  user.picture = pictures.shuffle.sample
+  user.picture = "http://res.cloudinary.com/cynthiouss/image/upload/v1459861816/face_10.jpg"
   user.city = ["Brussels", "Ghent", "Antwerp", "Paris"].shuffle.sample
   user.save!
 
