@@ -1,15 +1,11 @@
-/* body {
-  padding-top: 50px;
-} */
-
-/*******************************
-            BANNER
-*******************************/
-
 body {
   background-color: #EDF2F4;
   margin-top: 37px
 }
+
+/*******************************
+            First BANNER
+*******************************/
 
 .firstbanner {
  background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.30) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949824/wordof/building.jpg");
@@ -23,12 +19,15 @@ body {
  justify-content: center;
 }
 
+/* <<<<<<< HEAD
+=======
 .white {
   background-color: white;
   padding-top: 30px;
 }
 
 
+>>>>>>> d532dab236570d296e3b58bdab1e58e5c199a9d2 */
 .bannerup {
   margin-left: 0px;
   margin-top: 140px;
@@ -59,43 +58,6 @@ body {
     padding: 5px;
 }
 
-/* .form-control {
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    color: #555555;
-    vertical-align: middle;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-} */
-
-/* HowItWorks button*/
-
-.btn-work {
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: #334C62;
-  transition: background 0.1s ease-in-out;
-}
-
-.btn-work:hover {
-  opacity: 1;
-  background: #fff;
-  text-decoration: none;
-  color: #334c62;
-  box-shadow: 1px 1px 5px;
-}
-
 /* Search Bar */
 
 .search-criteria {
@@ -105,7 +67,6 @@ body {
 }
 
 /*End of Search Bar*/
-
 
 #scroll {
   padding-top: 30px;
@@ -125,16 +86,6 @@ body {
  width: 10%;
 }
 
-/* .first_banner {
- background-image: url('./WORDOF_pictures/building.jpeg');
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
- height: 100%;
- height: 100%;
-}
- */
 .first_banner p {
  color: black;
 }
@@ -178,19 +129,19 @@ body {
 }
 
 .quickness {
- background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949323/wordof/Time.jpg");
+ background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.3) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949323/wordof/Time.jpg");
 }
 
 .proximity {
- background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949318/wordof/People.jpg");
+ background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.3) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949318/wordof/People.jpg");
 }
 
 .trust {
- background-image: url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949321/wordof/man_on_bike.jpg");
+ background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.3) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949321/wordof/man_on_bike.jpg");
 }
 
 /*******************************
-
+      Suscribers banner
 *******************************/
 
 .banner-subscribers {
@@ -231,11 +182,17 @@ body {
  color: white;
 }
 
+.btn-danger {
+    color: #fff;
+    background-color: #EE5F5B;
+    border-color: #EE5F5B;
+}
+
 /*******************************
           Social buttons
 *******************************/
 
-.social h1 {
+/* .social h1 {
   font-size: 41px;
   font-weight: 500;
 }
@@ -259,11 +216,11 @@ body {
  height: 220px;
  width: 220px;
  border-radius: 20px;
-}
+} */
 
-.fa-font {      // Define the color of the social media logo
+/* .fa-font {      // Define the color of the social media logo
  color: #fff;
-}
+} */
 
 /* .social {
  padding: 50px 0px;
@@ -312,55 +269,4 @@ text-align: center;
 }
 
 
-/* .join {
- margin: 70px 0px;
- background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949325/wordof/Trees.jpg");
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- opacity: 0.8;
- background-size: cover;
- background-attachment: fixed;
-}
 
-.join h1 {
- color: white;
-}
-
-.jointitle {
- display: flex;
- justify-content: space-around;
- margin-bottom: 60px;
-}
-
-.rowtestimonials {
- display: flex;
- align-items: center;
- justify-content: center;
-}
-
-.testimonials img {
- height: 100%;
- width: 100%;
- }
-
-.testimonialpic {
- height: 350px;
- width: 16.666%;
-  float: left;
-  background-size: cover;
-  background-position: center;
-}
-
-.testimonialtext {
- height: 350px;
- width: 16.666%;
- padding: 10px 15px;
- float: left;
- font-size: 12px;
-}
-
-.card {
-  padding:10px;
-}
- */
