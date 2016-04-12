@@ -141,3 +141,22 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+/* HowItWorks button*/
+
+.btn-work {
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #334C62;
+  transition: background 0.1s ease-in-out;
+}
+
+.btn-work:hover {
+  opacity: 1;
+  background: #fff;
+  text-decoration: none;
+  color: #334c62;
+  box-shadow: 1px 1px 5px;
+}
