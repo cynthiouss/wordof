@@ -12,8 +12,15 @@ Rails.application.routes.draw do
 
   resources :user do
     resources :professional
+    resources :saveds, only: [:index]
+
+    # check if they are used
     resources :specialty
     resources :category
+  end
+
+  resources :professional, only: [] do # empty routes
+    resources :saveds, only: [:create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   multisearchable against: [:city]
 
   has_one :professional, dependent: :destroy
+
+  has_many :saveds, dependent: :destroy
 end
