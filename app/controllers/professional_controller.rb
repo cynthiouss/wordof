@@ -62,13 +62,14 @@ class ProfessionalController < ApplicationController
 
   def prof_params
     params.require(:professional).permit( :user_id,
-                                          :specialty_id,
-                                          :description,
-                                          :languages,
-                                          :address,
-                                          :phone,
-                                          :prof_email,
-                                          :recommended_by
-                                        )
+      :specialty_id,
+      :description,
+      :languages,
+      :address,
+      :phone,
+      :prof_email,
+      :recommended_by
+      )
   end
+
 end

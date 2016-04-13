@@ -25,6 +25,8 @@ gem 'bootstrap-select-rails'
 gem 'faker'
 gem 'pg_search'
 
+gem 'acts_as_votable', '~> 0.10.0'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

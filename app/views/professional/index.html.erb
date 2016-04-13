@@ -12,15 +12,15 @@
           <span><%= professional.user.name %></span>
           <strong>
             <% if user_signed_in? %>
-              <%= link_to professional_saveds_path(professional), method: :post do %>
+             <%= professional.saveds.count %> <%= link_to professional_saveds_path(professional), method: :post do %>
                 <i class="fa fa-bookmark"></i>
-              <% end %>
+            <% end %>
             <% end %>
           </strong>
         </h2>
         <div class="mc-content">
           <div class="img-container">
-            <img class="img-responsive" src="http://res.cloudinary.com/cynthiouss/image/upload/v1459861816/face_10.jpg">
+            <%= image_tag(professional.user.picture, style:"width:400px;height:auto") %>
           </div>
           <div class="mc-description">
             <%= professional.description %>
@@ -33,7 +33,7 @@
           <a class="fa fa-fw fa-mobile" href="tel:<%= professional.phone %> "></a>
           <a class="fa fa-fw fa-envelope" href="mailto:<%= professional.prof_email %>"></a>
           <a class="fa fa-fw fa-map-marker" href=""></a>
-          <a class="fa fa-fw fa-info" href=""></a>
+          <%= link_to 'test', professional_path(professional) %>
         </div>
       </article>
     </div>
