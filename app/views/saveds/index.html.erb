@@ -1,6 +1,6 @@
 <div class="container">
   <div class="page-header">
-      <h1>Your trusted professionals</h1><br>
+    <h1>Your trusted professionals</h1><br>
   </div>
 
   <div class="row active-with-click">
@@ -10,36 +10,44 @@
         <h2>
           <span><%= saved.professional.user.name %></span>
           <strong>
-          <%= saved.professional.specialty.category.name %> - <%= saved.professional.specialty.name %>
-          </strong>
-        </h2>
-        <div class="mc-content">
-          <div class="img-container">
-            <img class="img-responsive" src=<%= saved.professional.user.picture %> style="width:400px;height:auto">
-          </div>
-          <div class="mc-description">
-            <%= saved.professional.description %>
-          </div>
-        </div>
-        <a class="mc-btn-action">
-          <i class="fa fa-bars"></i>
-        </a>
-        <div class="mc-footer">
-          <a class="fa fa-fw fa-mobile" href="tel:<%= saved.professional.phone %> "></a>
-          <a class="fa fa-fw fa-envelope" href="mailto:<%= saved.professional.prof_email %>"></a>
-          <a class="fa fa-fw fa-map-marker" href=""></a>
-          <a class="fa fa-fw fa-info" href=""></a>
-        </div>
-      </article>
-    </div>
-  <% end %>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-12" style="text-align: center;">
-      <p><%= link_to "Go to homepage", root_path %></p>
-    </div>
+           <% if user_signed_in? %>
+           <%= link_to saved, method: :delete, data: {confirm: 'are you sure ?'} do %>
+           <i class="fa fa-bookmark"></i>
+           <% end %>
+           <% end %>
+           <%= saved.professional.specialty.category.name %> - <%= saved.professional.specialty.name %>
+         </strong>
+
+       </h2>
+       <div class="mc-content">
+        <div class="img-container">
+          <%= image_tag(saved.professional.user.picture, style:"width:400px;height:auto") %>
+
+        </div>
+        <div class="mc-description">
+          <%= saved.professional.description %>
+        </div>
+      </div>
+      <a class="mc-btn-action">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="mc-footer">
+        <a class="fa fa-fw fa-mobile" href="tel:<%= saved.professional.phone %> "></a>
+        <a class="fa fa-fw fa-envelope" href="mailto:<%= saved.professional.prof_email %>"></a>
+        <a class="fa fa-fw fa-map-marker" href=""></a>
+        <%= link_to professional_path(saved.professional), class: "fa fa-fw fa-info" %>
+      </div>
+    </article>
   </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12" style="text-align: center;">
+    <p><%= link_to "Go to homepage", root_path %></p>
+  </div>
+</div>
 </div>
 
 <script src="javascript.js"></script>
