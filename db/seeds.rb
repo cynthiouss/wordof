@@ -53,21 +53,22 @@ pictures = [
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861312/face_3.jpg",
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861450/face_5.jpg",
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861688/face_9.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861513/face_6.jpg"
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861513/face_6.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861950/face_11.jpg"
 ]
 
-(1..80).each do |i|
+(1..100).each do |i|
   user = User.new
-  user.email = i.to_s + '@example.com'
+  user.email = 'me' + i.to_s + '@example.com'
   user.password = 'valid_password'
   user.password_confirmation = 'valid_password'
   user.name = Faker::Name.name
-  user.picture = "http://res.cloudinary.com/cynthiouss/image/upload/v1459861816/face_10.jpg"
+  user.picture = Faker::Avatar.image("my-own-slug", "400x400", "jpg")
   user.city = ["Brussels", "Ghent", "Antwerp", "Paris"].shuffle.sample
   user.save!
 
   if i%2 == 0
-    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: "I'm the best in my field. Choose me and I'll get everything fixed!")
+    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: Faker::Lorem.sentence, phone: Faker::Config.locale = 'fr-be')
   end
 end
 
