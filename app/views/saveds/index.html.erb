@@ -36,7 +36,7 @@
         <a class="fa fa-fw fa-mobile" href="tel:<%= saved.professional.phone %> "></a>
         <a class="fa fa-fw fa-envelope" href="mailto:<%= saved.professional.prof_email %>"></a>
         <a class="fa fa-fw fa-map-marker" href=""></a>
-        <%= link_to 'test', professional_path(saved.professional) %>
+        <%= link_to professional_path(saved.professional), class: "fa fa-fw fa-info" %>
       </div>
     </article>
   </div>
