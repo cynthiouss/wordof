@@ -3,7 +3,7 @@
     <%#= p.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
     <%= f.simple_fields_for :specialty do |s| %>
       <%= s.input :category_id, collection: Category.all, prompt: "Select your profession", required: true %>
-      <%= s.input :name, label: "Specialising in", collection: Specialty.all, prompt: "Select your specialisation", required: true %>
+      <%= s.input :specialty_id, label: "Specialising in", collection: Specialty.all, prompt: "Select your specialisation", required: true %>
     <% end %>
     <%= f.input :description, placeholder: "Provide a short description of your services and experience", required: true %>
     <%= f.input :languages, collection: [ "English", "French", "Dutch", "German"], prompt: "Select your spoken language(s)", required: true %>
