@@ -1,0 +1,5 @@
+# config/meta.yml
+meta_title: "DON'T LOOK FOR IT, JUST FIND IT"
+meta_description: "Find a reliable service provider based on community's recommendations"
+meta_image: "wordof.png" # Une image dans votre dossier app/assets/images/
+twitter_account: "@mrngview" # indispensable pour les Twitter Cards
