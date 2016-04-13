@@ -1,10 +1,30 @@
 <div class="form-box">
   <%= simple_form_for(professional, :url => user_professional_index_path) do |f| %>
-    <%#= p.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
-    <%= f.simple_fields_for :specialty do |s| %>
-      <%= s.input :category_id, collection: Category.all, prompt: "Select your profession", required: true %>
-      <%= s.input :specialty_id, label: "Specialising in", collection: Specialty.all, prompt: "Select your specialisation", required: true %>
-    <% end %>
+
+    <div class="form-group select required professional_category">
+      <label class="select required control-label" for="category">
+        <abbr title="required">*</abbr> Profession
+      </label>
+      <select class='form-control' name="category_id" id="category">
+        <%= options_for_select(["Select your profession"]) %>
+        <% @categories.each do |category| %>
+          <%= options_for_select([category.name]) %>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-group select required professional_specialty">
+      <label class="select required control-label" for="professional_specialty_id">
+        <abbr title="required">*</abbr> Specialty
+      </label>
+      <select class='form-control' name="professional[specialty_id]" id="professional_specialty_id">
+        <%= options_for_select(["Select your specialisation"]) %>
+        <% @specialties.uniq.each do |specialty| %>
+          <%= options_for_select([[specialty.name, specialty.id, { class: "specialty #{specialty.category.name}" }]]) %>
+        <% end %>
+      </select>
+    </div>
+
     <%= f.input :description, placeholder: "Provide a short description of your services and experience", required: true %>
     <%= f.input :languages, collection: [ "English", "French", "Dutch", "German"], prompt: "Select your spoken language(s)", required: true %>
     <%= f.input :address, placeholder: "Avenue Louise 6, 1000", required: true %>

@@ -11,15 +11,20 @@ class ProfessionalController < ApplicationController
   end
 
   def new
+    @categories = Category.all
+    @specialties = Specialty.all
+
     @professional = Professional.new
     @professional.build_specialty
   end
 
   def create
+    @categories = Category.all
+    @specialties = Specialty.all
+
     @user = current_user
-    specialty = Specialty.create(prof_params[:specialty_attributes])
     professional = @user.build_professional(prof_params)
-    professional.specialty = specialty
+
     if professional.save
       redirect_to user_professional_path(@user.id, professional.id)
     else
@@ -32,6 +37,7 @@ class ProfessionalController < ApplicationController
 
   def update
     @professional.update_attributes(prof_params)
+
     if @professional.save
       redirect_to user_professional_path(@user.id, @professional.id)
     else
@@ -57,15 +63,12 @@ class ProfessionalController < ApplicationController
   def prof_params
     params.require(:professional).permit( :user_id,
                                           :specialty_id,
+                                          :description,
                                           :languages,
                                           :address,
                                           :phone,
                                           :prof_email,
-                                          :recommended_by,
-
-                                          specialty_attributes: [:name, :category_id]
-
+                                          :recommended_by
                                         )
   end
-
 end
