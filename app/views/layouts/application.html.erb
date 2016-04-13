@@ -2,14 +2,14 @@
 <html>
   <head>
     <title>WordOf</title>
-    <link rel="shortcut icon" href= <%= cl_image_tag("wordof/wordof-1.ico") %>>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag "wordof-1.ico" %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <%= favicon_link_tag "wordof-1.ico" %>
   </head>
     <body>
       <%= render 'shared/navbar' %>
