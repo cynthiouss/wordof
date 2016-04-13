@@ -1,6 +1,6 @@
 <div class="container">
   <div class="page-header">
-      <h1>Pick among our trusted professionals</h1><br>
+      <h1>Your trusted professionals</h1><br>
   </div>
 
   <div class="row active-with-click">
@@ -15,7 +15,7 @@
         </h2>
         <div class="mc-content">
           <div class="img-container">
-            <img class="img-responsive" src=<%= saved.professional.user.picture %> >
+            <img class="img-responsive" src=<%= saved.professional.user.picture %> style="width:400px;height:auto">
           </div>
           <div class="mc-description">
             <%= saved.professional.description %>
@@ -33,6 +33,12 @@
       </article>
     </div>
   <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12" style="text-align: center;">
+      <p><%= link_to "Go to homepage", root_path %></p>
+    </div>
   </div>
 </div>
 

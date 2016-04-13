@@ -11,12 +11,11 @@
         <h2>
           <span><%= professional.user.name %></span>
           <strong>
-          <% if user_signed_in? %>
-            <%= link_to professional_saveds_path(professional), method: :post do %>
-              <i class="fa fa-bookmark"></i>
+            <% if user_signed_in? %>
+              <%= link_to professional_saveds_path(professional), method: :post do %>
+                <i class="fa fa-bookmark"></i>
+              <% end %>
             <% end %>
-          <% end %>
-          <%= professional.specialty.category.name %> - <%= professional.specialty.name %>
           </strong>
         </h2>
         <div class="mc-content">

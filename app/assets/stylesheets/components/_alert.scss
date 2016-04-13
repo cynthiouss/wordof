@@ -6,6 +6,19 @@
   margin: 0;
   text-align: center;
   color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99999999999;
+  padding: 18px 0px;
+
+  .close {
+    top: -1px;
+    right: 20px;
+    color: black;
+    font-size: 23px;
+  }
 }
 .alert-info {
   background: $green;
