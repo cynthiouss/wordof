@@ -8,14 +8,13 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
   get 'myagents', to: 'pages#myagents'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "users/registrations" }
 
   resources :user do
     resources :professional
     resources :specialty
     resources :category
   end
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

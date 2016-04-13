@@ -62,7 +62,9 @@
       <!-- Sign up text -->
       <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
 
-    <% elsif current_page?(:controller => 'devise/registrations', :action => 'new') %>
+    <%# elsif current_page?(:controller => 'devise/registrations', :action => 'new') %>
+
+    <% elsif controller_name == 'registrations' %>
 
       <%= link_to t(".sign_in", default: "How it works"), root_path, class: "slow-scroll navbar-wagon-item navbar-wagon-link navbar-space" %> <!-- To add id: 'scroll' does not work... So for now, it only returns to the home page-->
 
