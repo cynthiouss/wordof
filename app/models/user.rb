@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   include PgSearch
   multisearchable against: [:city]
 
-  has_one :professional
+  has_one :professional, dependent: :destroy
 end
