@@ -4,16 +4,20 @@ Rails.application.routes.draw do
 
   get '/search', to: 'professional#index'
   get '/about', to: 'pages#about'
-  get 'searchtest', to: 'pages#searchtest'
-  get 'profile', to: 'pages#profile'
-  get 'myagents', to: 'pages#myagents'
 
   devise_for :users, controllers: { registrations: "users/registrations" }
 
   resources :user do
     resources :professional
+    resources :saveds, only: [:index]
+
+    # check if they are used
     resources :specialty
     resources :category
+  end
+
+  resources :professional, only: [] do # empty routes
+    resources :saveds, only: [:create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

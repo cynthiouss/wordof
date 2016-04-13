@@ -1,38 +1,32 @@
-
 <div class="container">
   <div class="page-header">
       <h1>Pick among our trusted professionals</h1><br>
   </div>
 
   <div class="row active-with-click">
-    <% @professionals.each do |professional| %>
+    <% @saveds.each do |saved| %>
     <div class="col-md-4 col-sm-6 col-xs-12">
       <article class="material-card Deep-Orange">
         <h2>
-          <span><%= professional.user.name %></span>
+          <span><%= saved.professional.user.name %></span>
           <strong>
-          <% if user_signed_in? %>
-            <%= link_to professional_saveds_path(professional), method: :post do %>
-              <i class="fa fa-bookmark"></i>
-            <% end %>
-          <% end %>
-          <%= professional.specialty.category.name %> - <%= professional.specialty.name %>
+          <%= saved.professional.specialty.category.name %> - <%= saved.professional.specialty.name %>
           </strong>
         </h2>
         <div class="mc-content">
           <div class="img-container">
-            <img class="img-responsive" src="http://res.cloudinary.com/cynthiouss/image/upload/v1459861816/face_10.jpg">
+            <img class="img-responsive" src=<%= saved.professional.user.picture %> >
           </div>
           <div class="mc-description">
-            <%= professional.description %>
+            <%= saved.professional.description %>
           </div>
         </div>
         <a class="mc-btn-action">
           <i class="fa fa-bars"></i>
         </a>
         <div class="mc-footer">
-          <a class="fa fa-fw fa-mobile" href="tel:<%= professional.phone %> "></a>
-          <a class="fa fa-fw fa-envelope" href="mailto:<%= professional.prof_email %>"></a>
+          <a class="fa fa-fw fa-mobile" href="tel:<%= saved.professional.phone %> "></a>
+          <a class="fa fa-fw fa-envelope" href="mailto:<%= saved.professional.prof_email %>"></a>
           <a class="fa fa-fw fa-map-marker" href=""></a>
           <a class="fa fa-fw fa-info" href=""></a>
         </div>
@@ -43,3 +37,4 @@
 </div>
 
 <script src="javascript.js"></script>
+
