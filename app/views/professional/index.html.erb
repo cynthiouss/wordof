@@ -10,7 +10,7 @@
           <span><%= professional.user.name %></span>
           <strong>
             <% if user_signed_in? %>
-            <%= professional.saveds.count %> <%= link_to professional_saveds_path(professional), method: :post do %>
+            <%= professional.recommended_by %> <%= link_to professional_saveds_path(professional), method: :post do %>
             <i class="fa fa-bookmark"></i>
             <% end %>
             <% end %>
