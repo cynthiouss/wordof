@@ -94,26 +94,105 @@
 </div>
 
 
-<div class="banner banner-subscribers text-center">
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-12'>
-        <div class="message">
-          <h1>YOU DESERVE IT TOO</h1><br><br>
-          <h3>5000 reliable services providers recommended 7000 trustable users</h3>
-          <br><br>
-          <%= link_to t(".sign_in", default: "I want to join too !!!"), new_user_registration_path, class: "btn btn-danger" %>
-        </div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= cl_image_tag("wordof/doctor.jpg") %>
+      <div class="carousel-caption">
+        <h3>Find a doctor who speaks your language</h3>
       </div>
     </div>
-  </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/woman_photographer.jpg") %>
+      <div class="carousel-caption">
+        <h3>A nice and creative photographer to have beautiful souvenirs</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/dentist.jpg") %>
+      <div class="carousel-caption">
+        <h3>A reliable dentist</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/plumber.jpg") %>
+      <div class="carousel-caption">
+        <h3>A dedicated plumber to help you in your urgencies</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/entrepreneur2.jpg") %>
+      <div class="carousel-caption">
+        <h3>An architect for a design that suits you</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/guitarist.jpg") %>
+      <div class="carousel-caption">
+        <h3>Some music to impress your guests?</h3>
+      </div>
+    </div>
+
+    <div class="item">
+      <%= cl_image_tag("wordof/typewriter_machine.jpg") %>
+      <div class="carousel-caption">
+        <h3>A copywriter for your startup !</h3>
+      </div>
+    </div>
+
+    <div class="item">
+    <%= cl_image_tag("wordof/wedding.jpg") %>
+      <div class="carousel-caption">
+        <h3>The best wedding planner just for you !</h3>
+      </div>
+    </div>
+
+
+    <div class="item">
+      <%= cl_image_tag("wordof/entrepreneur.jpg") %>
+      <div class="carousel-caption">
+        <h3>A reliable contractor for your new house !</h3>
+      </div>
+    </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+
+</div>
+
+
+
+
+
 
   <!-- Row1 -->
 <div class='container-fluid'>
   <div class='row'>
     <div class='col-xs-6 col-sm-2 boxdef'>
-      <img><%= cl_image_tag("wordof/Leonardo.png") %></img>
+      <img><%= cl_image_tag("wordof/leonardo.png") %></img>
     </div>
     <div class='col-xs-6 col-sm-2 boxdef'>
       <p>"I found a doctor who speaks my language in 2 minutes! Moving in Brussels was so easy"</p>
@@ -154,6 +233,21 @@
     </div>
     <div class='col-xs-6 col-sm-2 boxdef'>
       <img><%= cl_image_tag("wordof/electrician.jpg") %></img>
+    </div>
+  </div>
+</div>
+
+<div class="banner banner-subscribers text-center">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <div class="message">
+          <h1>YOU DESERVE IT TOO</h1><br><br>
+          <h3>5000 reliable services providers recommended 7000 trustable users</h3>
+          <br><br>
+          <%= link_to t(".sign_in", default: "I want to join too !!!"), new_user_registration_path, class: "btn btn-danger" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
+<div class="page-header">
+  <h1 class="wordof-color text-center padding">MY RECOMMENDATIONS</h1>
+</div>
 <div class="container">
-  <div class="page-header">
-    <h1>Your trusted professionals</h1><br>
-  </div>
 
   <div class="row active-with-click">
     <% @saveds.each do |saved| %>
@@ -36,7 +36,8 @@
         <a class="fa fa-fw fa-mobile" href="tel:<%= saved.professional.phone %> "></a>
         <a class="fa fa-fw fa-envelope" href="mailto:<%= saved.professional.prof_email %>"></a>
         <a class="fa fa-fw fa-map-marker" href=""></a>
-        <%= link_to professional_path(saved.professional), class: "fa fa-fw fa-info" %>
+        <%= link_to '', professional_path(saved.professional), class: "fa fa-fw fa-info" %>
+
       </div>
     </article>
   </div>

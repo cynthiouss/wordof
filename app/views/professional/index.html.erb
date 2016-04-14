@@ -1,9 +1,7 @@
-
+<div class="page-header">
+  <h1 class="wordof-color text-center padding">PICK AMONG OUR TRUSTED PROFESSIONALS</h1>
+</div>
 <div class="container">
-  <div class="page-header">
-      <h1>Pick among our trusted professionals</h1><br>
-  </div>
-
   <div class="row active-with-click">
     <% @professionals.each do |professional| %>
     <div class="col-md-4 col-sm-6 col-xs-12">
@@ -12,8 +10,8 @@
           <span><%= professional.user.name %></span>
           <strong>
             <% if user_signed_in? %>
-             <%= professional.saveds.count %> <%= link_to professional_saveds_path(professional), method: :post do %>
-                <i class="fa fa-bookmark"></i>
+            <%= professional.saveds.count %> <%= link_to professional_saveds_path(professional), method: :post do %>
+            <i class="fa fa-bookmark"></i>
             <% end %>
             <% end %>
           </strong>
@@ -37,7 +35,7 @@
         </div>
       </article>
     </div>
-  <% end %>
+    <% end %>
   </div>
 </div>
 
