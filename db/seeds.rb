@@ -58,27 +58,32 @@ women = [
   "v1459861312/face_3.jpg"
 ]
 
-architect = [
-  "v1460630185/woman_architect_2.jpg",
-  "v1460630182/woman_architect_1.jpg",
-  "v1460630241/man_architect_11.jpg",
-  "v1460630544/man_architect_5.jpg",
-  "v1460630204/man_architect_7.jpg",
-  "v1460630203/man_architect_3.jpg",
-  "v1460630201/man_architect_1.jpg",
-  "v1460630201/man_architect_2.jpg",
-  "v1460630759/man_architect_8.jpg",
-  "v1460630798/man_architect_9.jpg",
-  "v1460630191/man_architect_10.jpg",
-  "v1460630493/man_architect_4.jpg"
-]
-
 men = [
   "v1459861450/face_5.jpg",
   "v1459861513/face_6.jpg",
   "v1459861950/face_11.jpg",
-  "v1459861644/face_8.jpg",
+  "v1459861644/face_8.jpg"
+]
 
+architects = [
+  "v1460644023/wordof/architect_woman_8.png",
+  "v1460644025/wordof/architect_woman_7.jpg",
+  "v1460644024/wordof/architect_woman_6.jpg",
+  "v1460644023/wordof/architect_woman_5.jpg",
+  "v1460644022/wordof/architect_woman_4.jpg",
+  "v1460644024/wordof/architect_woman_3.jpg",
+  "v1460644024/wordof/architect_woman_2.jpg",
+  "v1460644023/wordof/architect_woman_1.jpg",
+  "v1460644022/wordof/architect_man_11.jpg",
+  "v1460644024/wordof/architect_man_10.jpg",
+  "v1460644023/wordof/architect_man_9.jpg",
+  "v1460644024/wordof/architect_man_8.jpg",
+  "v1460644023/wordof/architect_man_7.jpg",
+  "v1460644023/wordof/architect_man_6.jpg",
+  "v1460644023/wordof/architect_man_5.jpg",
+  "v1460644022/wordof/architect_man_4.jpg",
+  "v1460644024/wordof/architect_man_3.jpg",
+  "v1460644023/wordof/architect_man_2.jpg"
 ]
 
 Faker::Config.locale = 'fr'
@@ -89,7 +94,7 @@ Faker::Config.locale = 'fr'
   user.password = 'valid_password'
   user.password_confirmation = 'valid_password'
   user.name = Faker::Name.name
-  user[:picture] = architect.shuffle.sample
+  user[:picture] = architects.shuffle.sample
   user.city = ["Brussels", "Ghent", "Antwerp", "Paris"].shuffle.sample
   user.save!
 
