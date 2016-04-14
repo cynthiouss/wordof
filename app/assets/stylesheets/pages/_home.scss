@@ -1,6 +1,6 @@
 body {
   background-color: #EDF2F4;
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 /******************************
@@ -8,7 +8,7 @@ body {
 *******************************/
 
 .firstbanner {
- background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.30) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1459949824/wordof/building.jpg");
+ background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.30) 50%), url("http://res.cloudinary.com/cynthiouss/image/upload/v1460647168/wordof/dontsmile-collage.jpg ");
  text-align: center;
  height: 100vh;
  /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -27,6 +27,14 @@ body {
 .bannerup {
   margin-left: 0px;
   margin-top: 140px;
+}
+
+.bannerup h1 {
+  letter-spacing: 2px;
+}
+
+.bannerup p {
+  letter-spacing: 2px;
 }
 
 .bannerdown {
