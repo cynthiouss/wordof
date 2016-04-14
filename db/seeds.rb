@@ -50,17 +50,35 @@ end
 
 p "#{Specialty.count} specialties created"
 
-pictures = [
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861312/face_3.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861450/face_5.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861688/face_9.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861513/face_6.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861950/face_11.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861188/face_1.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861188/face_2.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861644/face_8.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861187/face_4.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861312/face_3.jpg"
+women = [
+  "v1459861688/face_9.jpg",
+  "v1459861188/face_1.jpg",
+  "v1459861188/face_2.jpg",
+  "v1459861187/face_4.jpg",
+  "v1459861312/face_3.jpg"
+]
+
+architect = [
+  "v1460630185/woman_architect_2.jpg",
+  "v1460630182/woman_architect_1.jpg",
+  "v1460630241/man_architect_11.jpg",
+  "v1460630544/man_architect_5.jpg",
+  "v1460630204/man_architect_7.jpg",
+  "v1460630203/man_architect_3.jpg",
+  "v1460630201/man_architect_1.jpg",
+  "v1460630201/man_architect_2.jpg",
+  "v1460630759/man_architect_8.jpg",
+  "v1460630798/man_architect_9.jpg",
+  "v1460630191/man_architect_10.jpg",
+  "v1460630493/man_architect_4.jpg"
+]
+
+men = [
+  "v1459861450/face_5.jpg",
+  "v1459861513/face_6.jpg",
+  "v1459861950/face_11.jpg",
+  "v1459861644/face_8.jpg",
+
 ]
 
 Faker::Config.locale = 'fr'
@@ -71,7 +89,7 @@ Faker::Config.locale = 'fr'
   user.password = 'valid_password'
   user.password_confirmation = 'valid_password'
   user.name = Faker::Name.name
-  user.picture = Faker::Avatar.image("my-own-slug", "400x400", "jpg")
+  user[:picture] = architect.shuffle.sample
   user.city = ["Brussels", "Ghent", "Antwerp", "Paris"].shuffle.sample
   user.save!
 
