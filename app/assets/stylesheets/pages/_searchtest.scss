@@ -129,6 +129,12 @@ html, body {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
 }
 .material-card .mc-btn-action {
   position: absolute;
