@@ -94,7 +94,7 @@ Faker::Config.locale = 'fr'
   user.save!
 
   if i%2 == 0
-    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: Faker::Lorem.sentence, phone: Faker::PhoneNumber.phone_number)
+    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: Faker::Lorem.sentence(3), phone: Faker::PhoneNumber.phone_number, address: "Rue de Stassart 60, 1050 Ixelles", recommended_by: Faker::Number.between(40, 250))
   end
 end
 
