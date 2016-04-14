@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.top {
+.topcrd {
  display: flex;
  align-items: center;
  justify-content: center;
@@ -16,7 +16,12 @@
      background-position: center;
 }
 
-.bottom {
+.topcrd p {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.bottomcrd {
  display: flex;
  align-items: center;
  justify-content: center;
@@ -27,6 +32,11 @@
  padding: 0px 10px;
  text-align: center;
  margin-bottom: 40px;
+}
+
+#textcrd {
+  color: white;
+  font-weight: 400;
 }
 
 .search {
