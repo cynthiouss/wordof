@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Saved.destroy_all
 Professional.destroy_all
 Specialty.destroy_all
 Category.destroy_all
@@ -54,10 +55,17 @@ pictures = [
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861450/face_5.jpg",
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861688/face_9.jpg",
   "http://res.cloudinary.com/cynthiouss/image/upload/v1459861513/face_6.jpg",
-  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861950/face_11.jpg"
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861950/face_11.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861188/face_1.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861188/face_2.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861644/face_8.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861187/face_4.jpg",
+  "http://res.cloudinary.com/cynthiouss/image/upload/v1459861312/face_3.jpg"
 ]
 
-(1..100).each do |i|
+Faker::Config.locale = 'fr'
+
+(1..500).each do |i|
   user = User.new
   user.email = 'me' + i.to_s + '@example.com'
   user.password = 'valid_password'
@@ -68,7 +76,7 @@ pictures = [
   user.save!
 
   if i%2 == 0
-    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: Faker::Lorem.sentence, phone: Faker::Config.locale = 'fr-be')
+    Professional.create!(user_id: user.id, specialty_id: Specialty.all.sample.id, languages: ["English", "French"].sample, prof_email: i.to_s + '@company.com', description: Faker::Lorem.sentence, phone: Faker::PhoneNumber.phone_number)
   end
 end
 
